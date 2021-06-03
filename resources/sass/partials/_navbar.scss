@@ -1,0 +1,142 @@
+.navbar{
+   height: 80px;
+   width: 100%;
+   position: fixed;
+   top: 0;
+   background-color: rgba($color: #000000, $alpha: 0.5);
+   z-index: 30;
+   opacity: 1;
+   animation-name: navopacity;
+   animation-duration: 6s;
+   animation-timing-function: linear;
+   @keyframes navopacity {
+   0%{
+      opacity: 0;
+    }
+    90%{
+       opacity: 0;
+    }
+    100%{
+      opacity: 1;
+    }
+   }
+   .container{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .logo{
+         color: #ffffff;
+         font-size: 20px;
+         font-family: 'Peralta', cursive;
+         .my{
+            margin-right: 5px;
+            position: relative;
+            &::after{
+               content: "";
+               width: 30px;
+               height: 30px;
+               background-color: $projectPrimary;
+               position: absolute;
+               z-index: -1;
+               top: 50%;
+               left: 50%;
+               transform: translate(-50%, -50%);
+              
+            }
+         }
+      }
+      .portfolioPages{
+         list-style: none;
+         display: flex;
+         font-size: 25px;
+         li{
+            &:not(:last-child){
+               margin-right: 20px;
+            }
+            a{
+               color: #cacaca;
+               padding: 20px 0;
+               text-decoration: none;
+               position: relative;
+               transition: all 0.5s;
+               &:hover{
+                  color: #ffffff;
+               }
+               &::before{
+                  content: "";
+                  display: block;
+                  position: absolute;
+                  height:2px;
+                  right: 0;
+                  bottom: 15px;
+                  width: 100%;
+                  background-color: $projectPrimary;
+                  transition: all 0.5s;
+                  opacity: 0;
+               }
+               &:hover::before{
+                  opacity: 1;
+               }
+               &::after{
+                  content: "";
+                  position: absolute;     
+                  left: 0%;
+                  background: white;
+                  bottom: 15px;
+                  width: 5px;
+                  height: 2px;
+                  opacity: 0;
+               }
+               &:hover::after{
+                  animation-name: hoverNav;
+                  animation-duration: 1.5s;
+                  animation-timing-function: linear;
+                }
+                @keyframes hoverNav {
+                  0%{
+                    left: 1%;
+                    opacity: 0;
+                  }
+                  1%{
+                     opacity: 1;
+                  }
+                  25%{
+                     left: 100%;
+                  }
+                  26%{
+                     left: 1%;
+                  }
+                  50%{
+                     left: 100%;
+                  }
+                  51%{
+                     left: 1%;
+                  }
+                  75%{
+                     left: 100%;
+                  }
+                  76%{
+                     left: 1%;
+                  }
+                  99%{
+                     left: 100%;
+                     opacity: 1;
+                  }
+                  100%{
+                     opacity: 0;
+                     left: 1%;
+                  }
+               }
+            }
+         }
+      }
+   }
+   
+}
+
+         
+         
+     
+   //    }
+      
+   // }

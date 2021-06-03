@@ -1,0 +1,22 @@
+*{
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+   &:focus{
+      color: transparent;
+      outline: transparent;
+      border: transparent;
+   }
+}
+body{
+   font-family: 'Englebert', sans-serif;
+}
+.container{
+   width: 90%;
+   margin: auto;
+   height: 100%;
+}
+.smallContainer{
+   width: 60%;
+   margin: auto;
+}

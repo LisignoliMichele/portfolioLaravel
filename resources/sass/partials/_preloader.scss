@@ -1,0 +1,233 @@
+.preloader{
+   position: fixed;
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   z-index: 100;
+   height: 0;
+   opacity: 0;
+   background-color: #000;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   animation-name: preloader;
+   animation-duration: 3s;
+   animation-timing-function: linear;
+   @keyframes preloader {
+      0%{
+      opacity: 1;
+      height: 100%;
+      }
+      60%{
+         opacity: 1;
+      }
+      99%{
+      height: 100%;
+      }
+      100%{
+      height: 0;
+      opacity: 0;
+      }
+   }
+   .welcome{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      .image_preloader{
+         margin-bottom: 20px;
+         width: 100%;
+         position: relative;
+         & > *{
+            position: absolute;
+            top: -120px;
+         }
+         img{
+            width: 100%;
+         }
+         & :nth-child(1){
+            animation-name: animatePz_1;
+            animation-duration: 2s;
+            opacity: 0;
+            animation-timing-function: linear;
+            @keyframes animatePz_1 {
+               0%{
+                  opacity: 0;
+               }
+               15%{
+                  opacity: 0;
+               }
+               23%{
+                  opacity: 1;
+               }
+               81%{
+                  opacity: 0;
+               }
+            }
+         }
+         & :nth-child(2){
+            animation-name: animatePz_2;
+            animation-duration: 2s;
+            opacity: 0;
+            animation-timing-function: linear;
+            @keyframes animatePz_2 {
+               0%{
+                  opacity: 0;
+               }
+               20%{
+                  opacity: 0;
+               }
+               28%{
+                  opacity: 1;
+               }
+               81%{
+                  opacity: 0;
+               }
+            }
+         }
+         & :nth-child(3){
+            animation-name: animatePz_3;
+            animation-duration: 2s;
+            opacity: 0;
+            animation-timing-function: linear;
+            @keyframes animatePz_3 {
+               0%{
+                  opacity: 0;
+               }
+               25%{
+                  opacity: 0;
+               }
+               33%{
+                  opacity: 1;
+               }
+               81%{
+                  opacity: 0;
+               }
+            }
+         }
+         & :nth-child(4){
+            animation-name: animatePz_4;
+            animation-duration: 2s;
+            opacity: 0;
+            animation-timing-function: linear;
+            @keyframes animatePz_4 {
+               0%{
+                  opacity: 0;
+               }
+               30%{
+                  opacity: 0;
+               }
+               38%{
+                  opacity: 1;
+               }
+               81%{
+                  opacity: 0;
+               }
+            }
+         }
+         & :nth-child(5){
+            animation-name: animatePz_5;
+            animation-duration: 2s;
+            opacity: 0;
+            animation-timing-function: linear;
+            @keyframes animatePz_5 {
+               0%{
+                  opacity: 0;
+               }
+               35%{
+                  opacity: 0;
+               }
+               43%{
+                  opacity: 1;
+               }
+               81%{
+                  opacity: 0;
+               }
+            }
+         }
+         & :nth-child(6){
+            animation-name: animatePz_6;
+            animation-duration: 2s;
+            opacity: 0;
+            animation-timing-function: linear;
+            @keyframes animatePz_6 {
+               0%{
+                  opacity: 0;
+               }
+               40%{
+                  opacity: 0;
+               }
+               48%{
+                  opacity: 1;
+               }
+               81%{
+                  opacity: 0;
+               }
+            }
+         }
+         & :nth-child(7){
+            animation-name: animatePz_7;
+            animation-duration: 2s;
+            opacity: 0;
+            animation-timing-function: linear;
+            @keyframes animatePz_7 {
+               0%{
+                  opacity: 0;
+               }
+               60%{
+                  opacity: 0;
+               }
+               65%{
+                  opacity: 0.2;
+               }
+               81%{
+                  opacity: 0;
+               }
+            }
+         }
+      }
+      i{
+         width: 100%;
+         text-align: center;
+         color: #fff;
+         font-size: 30px;
+         opacity: 0;
+         animation-name: welcome;
+         animation-duration: 2s;
+         animation-timing-function: linear;
+         @keyframes welcome {
+            0%{
+            opacity: 1;
+            }
+            // // 10%{
+            // //    color: #fff;
+            // // }
+            // // 20%{
+            // //    color: #fff;
+            // // }
+            // // 30%{
+            // //    color: #606060;
+            // // }
+            // // 40%{
+            // //    color: #606060;
+            // // }
+            // // 50%{
+            // //    color: #fff;
+            // // }
+            // // 60%{
+            // //    color: #606060;
+            // // }
+            // // 70%{
+            // //    color: #fff;
+            // // }
+            // // 80%{
+            // //    font-size: 30px;
+            // }
+            100%{
+               opacity: 0;
+            }
+         }
+      }
+   }
+}

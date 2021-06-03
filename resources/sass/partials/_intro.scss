@@ -1,0 +1,32 @@
+.intro{
+   padding: 150px 0;
+   background-color: #000;
+   .smallContainer{
+      display: flex;
+      .introleft{
+         width: 30%;
+         position: relative;
+         .myshape{
+            position: absolute;
+            right: 0;
+            transition: 2s;
+            opacity: 0;
+         }
+         img{
+            width: 100%;
+         }
+      }
+      .introright{
+         margin-left: 5%;
+         width: 65%;
+         p{
+            font-family: 'Inter', sans-serif;
+            color: white;
+            font-size: 20px;
+         }
+      }
+      &:hover .myshape{
+         opacity: 1;
+      }
+   }
+}
