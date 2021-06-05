@@ -118,5 +118,5 @@
 </div>
 @endsection
 @section('js')
-<script src="{{asset("js/portfolio.js")}}"></script>
+<script src="{{secure_asset("js/portfolio.js")}}"></script>
 @endsection
