@@ -1,0 +1,52 @@
+#aboutMe{
+   background-color: $yellowPrimary;
+   padding: $sectionPadding;
+   position: relative;
+   h2{
+      text-align: center;
+      margin-bottom: 50px;
+   }
+   p{
+      color: black;
+      font-size: 20px;
+   }
+   li{
+      margin: 10px 0 0 20px;
+      font-size: 20px;
+   }
+   .bells{
+      position: absolute;
+      width: 15%;
+      top: 0;
+      right: 0;
+      img{
+         width: 100%;
+      }
+   }
+   .aboutsc{
+      padding:90px 0;
+   }
+   .aboutMain{
+      display: flex;
+      .aboutleft{
+         width: 35%;
+         position: relative;
+         .myshape{
+            position: absolute;
+            right: 0;
+            transition: 2s;
+            opacity: 0;
+         }
+         img{
+            width: 100%;
+         }
+      }
+      .aboutright{
+         margin-left: 5%;
+         width: 60%;
+      }
+      &:hover .myshape{
+         opacity: 1;
+      }
+   }
+}

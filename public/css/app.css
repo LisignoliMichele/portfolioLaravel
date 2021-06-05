@@ -10,7 +10,7 @@
 }
 
 body {
-  font-family: "Englebert", sans-serif;
+  font-family: "Oxygen", sans-serif;
 }
 
 .container {
@@ -22,6 +22,16 @@ body {
 .smallContainer {
   width: 60%;
   margin: auto;
+}
+
+.mediumContainer {
+  width: 75%;
+  margin: auto;
+}
+
+section h2 {
+  font-family: "Ranchers", cursive;
+  font-size: 100px;
 }
 
 .preloader {
@@ -428,17 +438,17 @@ body {
 .navbar .container .logo {
   color: #ffffff;
   font-size: 20px;
-  font-family: "Peralta", cursive;
 }
 .navbar .container .logo .my {
   margin-right: 5px;
   position: relative;
+  font-family: "Ranchers", cursive;
 }
 .navbar .container .logo .my::after {
   content: "";
   width: 30px;
   height: 30px;
-  background-color: #d70000;
+  background-color: #ED4534;
   position: absolute;
   z-index: -1;
   top: 50%;
@@ -471,7 +481,7 @@ body {
   right: 0;
   bottom: 15px;
   width: 100%;
-  background-color: #d70000;
+  background-color: #ED4534;
   transition: all 0.5s;
   opacity: 0;
 }
@@ -1019,7 +1029,7 @@ body {
 .home .helloworld .michele,
 .home .helloworld .lisignoli {
   color: #ffffff;
-  font-family: "Peralta", cursive;
+  font-family: "Ranchers", cursive;
   display: flex;
   justify-content: flex-end;
   font-size: 150px;
@@ -2257,32 +2267,72 @@ body {
 .intro {
   padding: 150px 0;
   background-color: #000;
+  color: white;
+  font-size: 20px;
 }
 .intro .smallContainer {
   display: flex;
 }
 .intro .smallContainer .introleft {
   width: 30%;
-  position: relative;
 }
-.intro .smallContainer .introleft .myshape {
-  position: absolute;
-  right: 0;
-  transition: 2s;
-  opacity: 0;
-}
-.intro .smallContainer .introleft img {
-  width: 100%;
+.intro .smallContainer .introleft .date {
+  margin-right: 10px;
 }
 .intro .smallContainer .introright {
   margin-left: 5%;
   width: 65%;
 }
-.intro .smallContainer .introright p {
-  font-family: "Inter", sans-serif;
-  color: white;
+
+#aboutMe {
+  background-color: #F6C76F;
+  padding: 150px 0;
+  position: relative;
+}
+#aboutMe h2 {
+  text-align: center;
+  margin-bottom: 50px;
+}
+#aboutMe p {
+  color: black;
   font-size: 20px;
 }
-.intro .smallContainer:hover .myshape {
+#aboutMe li {
+  margin: 10px 0 0 20px;
+  font-size: 20px;
+}
+#aboutMe .bells {
+  position: absolute;
+  width: 15%;
+  top: 0;
+  right: 0;
+}
+#aboutMe .bells img {
+  width: 100%;
+}
+#aboutMe .aboutsc {
+  padding: 90px 0;
+}
+#aboutMe .aboutMain {
+  display: flex;
+}
+#aboutMe .aboutMain .aboutleft {
+  width: 35%;
+  position: relative;
+}
+#aboutMe .aboutMain .aboutleft .myshape {
+  position: absolute;
+  right: 0;
+  transition: 2s;
+  opacity: 0;
+}
+#aboutMe .aboutMain .aboutleft img {
+  width: 100%;
+}
+#aboutMe .aboutMain .aboutright {
+  margin-left: 5%;
+  width: 60%;
+}
+#aboutMe .aboutMain:hover .myshape {
   opacity: 1;
 }

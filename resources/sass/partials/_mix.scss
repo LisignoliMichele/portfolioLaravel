@@ -9,7 +9,7 @@
    }
 }
 body{
-   font-family: 'Englebert', sans-serif;
+   font-family: $fontSerious;
 }
 .container{
    width: 90%;
@@ -20,3 +20,16 @@ body{
    width: 60%;
    margin: auto;
 }
+.mediumContainer{
+   width: 75%;
+   margin: auto;
+}
+
+// SECTIONS
+section{
+   h2{
+      font-family: $fontPlayful;
+      font-size: 100px;
+   }
+}
+

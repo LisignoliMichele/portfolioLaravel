@@ -27,15 +27,15 @@
       .logo{
          color: #ffffff;
          font-size: 20px;
-         font-family: 'Peralta', cursive;
          .my{
             margin-right: 5px;
             position: relative;
+            font-family: $fontPlayful;
             &::after{
                content: "";
                width: 30px;
                height: 30px;
-               background-color: $projectPrimary;
+               background-color: $orangePrimary;
                position: absolute;
                z-index: -1;
                top: 50%;
@@ -70,7 +70,7 @@
                   right: 0;
                   bottom: 15px;
                   width: 100%;
-                  background-color: $projectPrimary;
+                  background-color: $orangePrimary;
                   transition: all 0.5s;
                   opacity: 0;
                }
