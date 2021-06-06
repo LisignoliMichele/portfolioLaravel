@@ -1,18 +1,16 @@
-
-var app = new Vue(
-   {
-      el: "#app",
-      data:{
-         currentTime: '',
-      },
-      methods: {
-         moment: function () {
-           return moment();
-         }
-       },
-      watch: {
-         moment: function (date) {
-           this.currentTime = moment(date).format('MMMM Do YYYY, h:mm:ss a');
-         }
-       }
-   });
+var app = new Vue({
+  el: "#app",
+  data: {
+    time: ''
+  },
+  methods: {
+    moment: function () {
+      return moment();
+    }
+  },
+  beforeMount () {
+    setInterval(() => {
+      this.time = moment().format('HH:mm:ss')
+    }, 1000)
+  }
+});
