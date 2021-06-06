@@ -4,6 +4,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Oxygen&family=Ranchers&display=swap" rel="stylesheet">
 @endsection
 @section('cdns')
+<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
 <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js" integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 @endsection
@@ -40,8 +41,8 @@
         <ul class="portfolioPages">
           <li><a href="#">Home</a></li>
           <li><a href="#aboutMe">About me</a></li>
-          <li><a href="#myProjects">Projects</a></li>
-          <li><a href="#">Contacts</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contacts">Contacts</a></li>
         </ul>
     </nav>
     {{-- //NAVBAR --}}
@@ -135,25 +136,47 @@
             <img src="img/meElephantWeb.png" alt="me on Elephant">
           </div>
         </div>
-
-
-        {{-- <div class="aboutHat">
-          <div class="content">
-            <img src="img/abouthead.jpg" alt="Me young">
-            <img class="myshape" src="img/myshirt.png" alt="My shirt">
-          </div>
-        </div> --}}
       </div>
     </section>
     {{-- //ABOUT ME --}}
     {{-- MY PROJECTS --}}
-    <section id="myProjects">
+    <section id="projects">
       <h2>My projects</h2>
+      <!-- CAROUSEL -->
+      <div class="carousel">
+        <div id="picker" class="picker">
+          <div v-for="proj in projects" class="cell">
+            <div class="cell-content">
+              <h3>@{{proj.name}}</h3>
+              <p>@{{proj.description}}</p>
+              <h5>Realized with</h5>
+              <small>@{{proj.tecnologies}}</small>
+              <div class="btn">
+                <a href="#">Go to the app</a>
+              </div>
+            </div>
+          </div>     
+        </div>  
+      </div>
+     <!-- /CAROUSEL -->
+    </section>
+    {{-- //MY PROJECTS --}}
+     {{-- MY PROJECTS --}}
+     <section id="contacts">
+      <h2>Contacts</h2>
+       <div class="aboutHat">
+          <div class="photoContacts">
+            <img src="img/abouthead.jpg" alt="Me young">
+            <img class="myshape" src="img/myshirt.png" alt="My shirt">
+          </div>
+        </div>
     </section>
     {{-- //MY PROJECTS --}}
   </main>
 </div>
 @endsection
 @section('js')
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.2/TweenMax.min.js"></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.2/utils/Draggable.min.js'></script>
 <script src="{{asset("js/portfolio.js")}}"></script>
 @endsection

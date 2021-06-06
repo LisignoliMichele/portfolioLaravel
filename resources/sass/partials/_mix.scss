@@ -8,6 +8,9 @@
       border: transparent;
    }
 }
+html{
+   scroll-behavior: smooth;
+ }
 body{
    font-family: $fontSerious;
 }

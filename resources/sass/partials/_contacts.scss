@@ -1,0 +1,18 @@
+#contacts{
+   .photoContacts{
+         width: 25%;
+         position: relative;
+         .myshape{
+            position: absolute;
+            right: 0;
+            transition: 2s;
+            opacity: 0;
+         }
+         img{
+            width: 100%;
+         }
+         &:hover .myshape{
+            opacity: 1;
+         }
+      }
+}
