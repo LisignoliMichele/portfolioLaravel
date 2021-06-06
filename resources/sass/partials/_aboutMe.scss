@@ -4,49 +4,136 @@
    position: relative;
    h2{
       text-align: center;
-      margin-bottom: 50px;
+      margin-bottom: 40px;
+      font-size: 150px;
    }
    p{
-      color: black;
-      font-size: 20px;
-   }
-   li{
-      margin: 10px 0 0 20px;
+      color: #fff;
       font-size: 20px;
    }
    .bells{
       position: absolute;
-      width: 15%;
+      width: 25%;
       top: 0;
       right: 0;
       img{
          width: 100%;
       }
    }
-   .aboutsc{
-      padding:90px 0;
-   }
    .aboutMain{
-      display: flex;
-      .aboutleft{
-         width: 35%;
-         position: relative;
-         .myshape{
-            position: absolute;
-            right: 0;
-            transition: 2s;
-            opacity: 0;
-         }
+      height: 1300px;
+      position: relative;
+      // .aboutHat{
+      //    width: 25%;
+      //    position: relative;
+      //    .myshape{
+      //       position: absolute;
+      //       right: 0;
+      //       transition: 2s;
+      //       opacity: 0;
+      //    }
+      //    img{
+      //       width: 100%;
+      //    }
+      //    &:hover .myshape{
+      //       opacity: 1;
+      //    }
+      // }
+      .tecnologies,
+      .intro,
+      .prevLive,
+      .australia{
+         border-radius: 50%;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         text-align: center;
+         box-shadow: inset 5px 10px #888888;
+      }
+      .intro{
+         width: 550px;
+         height: 550px;
+         padding: 100px;
+         background-color: black;
+         position: absolute;
+         top: 0%;
+         left: 10%;
+         
+      }
+      .tecnologies{
+         height: 400px;
+         width:400px;
+         padding: 70px;
+         background-color: black;
+         position: absolute;
+         top: 11%;
+         right: 15%;
+      }
+      .prevLive{
+         width:500px;
+         height: 500px;
+         padding: 80px;
+         background-color: black;
+         position: absolute;
+         bottom: 2%;
+         left: 20%;
+      }
+      .australia{
+         width:250px;
+         height: 250px;
+         padding: 20px;
+         background-color: black;
+         position: absolute;
+         bottom: 37%;
+         left: -2%;
+      }
+      .meElephant{
+         width: 40%;
+         position: absolute;
+         bottom: -154px;
+         right: 0;
          img{
             width: 100%;
          }
       }
-      .aboutright{
-         margin-left: 5%;
-         width: 60%;
-      }
-      &:hover .myshape{
-         opacity: 1;
+      .circle{
+         
+         &_1{
+            position: absolute;
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            background-color: $orangePrimary;
+            top: 50%;
+            left:50%
+         }
+         &_2{
+            position: absolute;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            background-color: $greenPrimary;
+            top: 40%;
+            left:15%;
+         }
+         &_3{
+            position: absolute;
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            background-color: $lightBluePrimary;
+            top: 70%;
+            right:0
+         }
+         &_4{
+            position: absolute;
+            border-radius: 50%;
+            width: 70px;
+            height: 70px;
+            background-color: $bluePrimary;
+            bottom: 0%;
+            left:10%
+         }
       }
    }
 }

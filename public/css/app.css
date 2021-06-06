@@ -2291,48 +2291,115 @@ section h2 {
 }
 #aboutMe h2 {
   text-align: center;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
+  font-size: 150px;
 }
 #aboutMe p {
-  color: black;
-  font-size: 20px;
-}
-#aboutMe li {
-  margin: 10px 0 0 20px;
+  color: #fff;
   font-size: 20px;
 }
 #aboutMe .bells {
   position: absolute;
-  width: 15%;
+  width: 25%;
   top: 0;
   right: 0;
 }
 #aboutMe .bells img {
   width: 100%;
 }
-#aboutMe .aboutsc {
-  padding: 90px 0;
-}
 #aboutMe .aboutMain {
-  display: flex;
-}
-#aboutMe .aboutMain .aboutleft {
-  width: 35%;
+  height: 1300px;
   position: relative;
 }
-#aboutMe .aboutMain .aboutleft .myshape {
-  position: absolute;
-  right: 0;
-  transition: 2s;
-  opacity: 0;
+#aboutMe .aboutMain .tecnologies,
+#aboutMe .aboutMain .intro,
+#aboutMe .aboutMain .prevLive,
+#aboutMe .aboutMain .australia {
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  box-shadow: inset 5px 10px #888888;
 }
-#aboutMe .aboutMain .aboutleft img {
+#aboutMe .aboutMain .intro {
+  width: 550px;
+  height: 550px;
+  padding: 100px;
+  background-color: black;
+  position: absolute;
+  top: 0%;
+  left: 10%;
+}
+#aboutMe .aboutMain .tecnologies {
+  height: 400px;
+  width: 400px;
+  padding: 70px;
+  background-color: black;
+  position: absolute;
+  top: 11%;
+  right: 15%;
+}
+#aboutMe .aboutMain .prevLive {
+  width: 500px;
+  height: 500px;
+  padding: 80px;
+  background-color: black;
+  position: absolute;
+  bottom: 2%;
+  left: 20%;
+}
+#aboutMe .aboutMain .australia {
+  width: 250px;
+  height: 250px;
+  padding: 20px;
+  background-color: black;
+  position: absolute;
+  bottom: 37%;
+  left: -2%;
+}
+#aboutMe .aboutMain .meElephant {
+  width: 40%;
+  position: absolute;
+  bottom: -154px;
+  right: 0;
+}
+#aboutMe .aboutMain .meElephant img {
   width: 100%;
 }
-#aboutMe .aboutMain .aboutright {
-  margin-left: 5%;
-  width: 60%;
+#aboutMe .aboutMain .circle_1 {
+  position: absolute;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  background-color: #ED4534;
+  top: 50%;
+  left: 50%;
 }
-#aboutMe .aboutMain:hover .myshape {
-  opacity: 1;
+#aboutMe .aboutMain .circle_2 {
+  position: absolute;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  background-color: #004B5A;
+  top: 40%;
+  left: 15%;
+}
+#aboutMe .aboutMain .circle_3 {
+  position: absolute;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  background-color: #6BCBF3;
+  top: 70%;
+  right: 0;
+}
+#aboutMe .aboutMain .circle_4 {
+  position: absolute;
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  background-color: #071F41;
+  bottom: 0%;
+  left: 10%;
 }

@@ -1,8 +1,7 @@
 var app = new Vue({
   el: "#app",
   data: {
-    
-    time: '',
+    time: ''
   },
   methods: {
     moment: function () {
