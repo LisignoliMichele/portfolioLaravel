@@ -1,0 +1,398 @@
+/* mix */
+body{
+  font-family: 'Open Sans', sans-serif;
+}
+.list-inline{
+  margin-bottom: 0px;
+}
+.bg_grey{
+ background-color: #fafafa;
+}
+.bg_blue{
+  background-color: #59cbf5;
+}
+.bg_yellow{
+  background-color:#fed234;
+}
+.container_small{
+  max-width: 800px;
+  margin: auto;
+}
+.clearfix{
+  content: "";
+  display: block;
+  clear: both;
+}
+/* tipo */
+h1{
+  font-size: 100px;
+  font-weight: bold;
+}
+h2{
+  font-size: 30px;
+  font-weight: bold;
+}
+p{
+  font-size: 20px;
+}
+h3{
+  font-weight: bold;
+  font-size: 20px;
+}
+h5{
+  font-weight: 600;
+  font-size: 45px;
+  margin: 30px 0;
+}
+/* buttons */
+.btn:hover{
+  color: #fff;
+}
+.btn_primary{
+  background-color: #000;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 0px;
+  padding: 8px 20px;
+}
+.btn_mobile{
+  background: transparent;
+  padding: 5px;
+  font-size: 18px;
+}
+/* nav_bar */
+.nav_bar{
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+  top:0;
+  left:0;
+  right:0;
+  height: 70px;
+  line-height: 70px;
+  background-color: #fff;
+}
+.logo img{
+  height: 14px;
+}
+.main-nav li{
+  margin-right: 30px;
+}
+.main-nav li a{
+  color: #000;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 600;
+}
+.main-nav li a:hover{
+  text-decoration: none;
+}
+.secondary-nav{
+  margin-left:20px;
+}
+.secondary-nav .lang{
+  background-color: transparent;
+  border: none;
+  border-left: 1px solid #666;
+  border-right: 1px solid #666;
+  line-height: normal;
+  color: #000;
+  font-size: 12px;
+}
+/* banner */
+.banner{
+  padding: 150px 0;
+}
+.banner img{
+  width: 100%;
+}
+/* main */
+section{
+  margin: 120px 0;
+  padding: 30px 0;
+}
+
+  /* section main products */
+.product{
+  padding: 80px 20px 30px 20px;
+}
+.product_logo{
+  height: 22px;
+}
+.product_img{
+  max-height: 280px;
+}
+.product a{
+  display: block;
+  font-size: 22px;
+}
+.product p,
+.product a,
+.product_logo {
+  margin-bottom: 25px;
+}
+.product_logo{
+  width: 100%;
+}
+.product a i{
+  font-size: 15px;
+}
+  /* section carousel*/
+.section_background{
+  position: absolute;
+  background-image: url("../img/helbiz/banner.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 500px;
+  width: 100%
+}
+.boxes{
+  padding-top: 200px;
+}
+.box{
+  display: inline-block;
+  width: calc((100% / 3) - 4px);
+  position: relative;
+}
+.box-2{
+  left: calc(100% / 3);
+}
+.box-1{
+  right:calc(100% / 3);
+  vertical-align: bottom;
+  padding-right: 60px;
+}
+.box-2 img{
+  width: 100%;
+  max-width: 250px;
+  vertical-align: baseline;
+}
+.box-3{
+  vertical-align: bottom;
+  padding-left: 60px;
+}
+#carousel p{
+  font-size: 16px;
+}
+
+  /* section info */
+.info_box{
+  padding: 30px 0;
+  color: #fff;
+  margin-top: 30px;
+}
+.info_box_photo{
+  width: 100%;
+}
+.info_box_photo img{
+  width: 100%;
+}
+.box_info_logo{
+  width: 60%;
+}
+.large-box .product_details,
+.large-box .info_box_photo{
+  width: 50%;
+  float: right;
+}
+.head_box .product_details{
+  text-align: left;
+  padding-right: 50px;
+}
+.info_box_photo{
+  text-align: center;
+}
+.head_box a,
+.head_box h5,
+.head_box p{
+  color: #000;
+}
+.large-box a{
+  font-size: 20px;
+}
+.large-box p{
+  margin: 30px 0;
+}
+.short_box h5{
+  padding: 0 40px;
+}
+.short_box img{
+  max-width: 100%;
+}
+.bg_yellow img{
+  padding-top: 30px;
+}
+.short_box{
+  min-height: 650px;
+}
+.large-box{
+  min-height: 500px;
+}
+.smart_mobility{
+  background-image: url("../img/helbiz/scooter-banner.jpg");
+}
+.smart_mobility .product_details{
+  padding: 20px 60px;
+}
+.smart_mobility a{
+ color: #fff;
+}
+.box_app{
+  background-image: linear-gradient(rgb(65, 86, 106), rgb(37, 47, 56));
+  position: relative;
+}
+.box_app img{
+  width: 60%;
+  position: absolute;
+  bottom: 0;
+  left: 21%;
+}
+.box_app a{
+  font-size: 20px;
+  color: #fff;
+}
+.box_app a .ios{
+  margin-right: 20px;
+}
+.box_cities{
+  background-image: url('../img/helbiz/city.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.box_cities a{
+  font-size: 20px;
+  color: #fff;
+}
+/* footer */
+footer{
+  background-color: #000000;
+  color: #fff;
+}
+footer li{
+  list-style: none;
+  line-height: 30px;
+}
+.footer_top{
+  padding: 80px 0;
+}
+.footer_top ul{
+  min-height: 250px;
+}
+.footer_top img{
+  max-width: 150px;
+  margin-bottom: 40px;
+}
+.footer_top h5{
+  margin-bottom: 40px;
+}
+ul{
+  padding: 0;
+}
+h6{
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+footer a{
+  color: #fff;
+  font-size: 16px;
+}
+.social_list{
+  display: flex;
+}
+.social_list li:not(:last-child){
+  margin-right: 20px;
+}
+/* media */
+@media screen and (max-width: 992px){
+  h1{
+    font-size: 80px;
+  }
+  .banner{
+    padding: 100px 0;
+  }
+  .product{
+    margin-bottom: 30px;
+  }
+  #carousel .box-1{
+    padding-left: 40px;
+  }
+  .large-box .product_details,
+  .large-box .info_box_photo{
+    width: 100%;
+  }
+  .head-box .product_details{
+    padding-left: 30px;
+  }
+  .smart_mobility{
+    background-position: right;
+  }
+  .smart_mobility .product_details{
+    padding: 50px 100px;
+  }
+}
+@media screen and (max-width: 768px){
+  h1{
+    font-size: 60px;
+  }
+  #carousel .box-1,
+  #carousel .box-3{
+    width: 100%;
+    padding-left: 40px;
+  }
+  #carousel .box-1{
+    right: auto;
+  }
+  #carousel .box-2{
+    width: 100%;
+    left: auto;
+  }
+  .smart_mobility .product_details{
+    padding: 20px 30px;
+  }
+  .product_img {
+    max-height: 100%;
+    width: 100%;
+  }
+}
+
+.prova_footer1_col1{
+  height: 100px;
+  background-color: #00ff00;
+}
+.prova_footer1_col2{
+height: 100px;
+background-color: #8ff296;
+}
+.prova_footer1_col3{
+height: 100px;
+background-color: #8ff2f1;
+}
+.prova_footer1_col4{
+height: 100px;
+background-color: #bbbbf1;
+}
+.prova_footer1_col5{
+height: 100px;
+background-color: #bbbb80;
+}
+.prova_footer2_col1{
+  height: 100px;
+  background-color: #ff0000;
+}
+.prova_footer2_col2{
+height: 100px;
+background-color: #7403ff;
+}
+.prova_footer2_col3{
+height: 100px;
+background-color: #00d8ff;
+}
+.prova_footer2_col4{
+height: 100px;
+background-color: #04ff3f;
+}
+.prova_footer2_col5{
+height: 100px;
+background-color: #fcff05;
+}

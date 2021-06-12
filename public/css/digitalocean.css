@@ -1,0 +1,491 @@
+/* mix */
+body{
+  font-family: 'Roboto', sans-serif;
+}
+.list-inline{
+  margin-bottom: 0px;
+}
+.bg_grey{
+  background-color: #f3f5f9;
+}
+.container_small{
+  max-width: 750px;
+  margin: auto;
+}
+ul{
+  padding: 0;
+}
+:focus {
+  background: #f3f5f9;
+  border-color: #136ffb;
+  color: #136ffb;
+}
+/* buttons */
+.burger-button{
+  background: transparent;
+  font-size: 30px;
+}
+.empty_button{
+  padding: 10px;
+  background-color: transparent;
+  border: 1px solid #1268fb;
+  color: #1268fb;
+  border-radius: 5px;
+  display: inline-block;
+  line-height: normal;
+}
+.btn_blue{
+  width: 100%;
+  padding:10px;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  background-color: #136ffb;
+  color: #fff;
+  font-size: 20px;
+}
+.btn_google{
+  width: 100%;
+  padding:10px;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  background-color: #fff;
+  background-image: url("../img/digitalocean/google-icon.png");
+  background-size: 8%;
+  background-position: 10% 50%;
+  background-repeat: no-repeat;
+  font-size: 20px;
+  box-shadow: 5px 10px 15px #cacaca;
+}
+.btn_getStarted{
+  padding: 10px;
+  background-color: #fff;
+  color: #1268fb;
+  border-radius: 5px;
+  font-size: 20px;
+  display: inline-block;
+}
+/* tipo */
+h1{
+  font-size: 60px;
+  line-height: 120%;
+  color: #fff;
+}
+h4{
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+h3{
+  text-transform: uppercase;
+  font-size: 15px;
+  font-weight: 700;
+  color: #5b6987;
+}
+h2{
+  font-size: 36px;
+  font-weight: 700;
+  color: #031b4e;
+  margin-bottom: 30px;
+}
+h5{
+  font-size: 18px;
+  color: #031b4e;
+}
+h6{
+  font-size: 18px;
+  font-weight: 700;
+}
+/* nav_bar */
+.nav_bar{
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+  top:0;
+  left:0;
+  right:0;
+  height: 70px;
+  line-height: 70px;
+  background-color: #fff;
+}
+.nav_bar .logo img{
+  max-height: 32px;
+  margin-bottom: 8px;
+}
+.nav_bar li{
+  margin-left: 15px;
+}
+.main-nav i,
+.secondary-nav i{
+  margin-left: 5px;
+  font-size: 13px;
+}
+.nav_bar li a{
+  color: #000035;
+  font-size: 14px;
+}
+.burger-button i{
+  font-size: 25px;
+}
+.nav_bar li a:hover{
+  color: #1268fb;
+  text-decoration: none;
+}
+.nav_bar .empty_button:hover{
+  background-color: #1268fb;
+  color: #fff;
+}
+/* hero */
+.hero{
+  background-image: url("../img/digitalocean/bg-hero.svg");
+  background-size: cover;
+  background-position: 45%;
+  margin-top: 70px;
+}
+.hero_title,
+.sing_up_box{
+  margin: 200px 0;
+}
+.hero p{
+  font-size: 25px;
+  font-weight: 300;
+  color: #fff;
+  margin-top: 30px;
+}
+.sing_up_box{
+  background-color: #fff;
+  border-radius: 10px;
+  text-align: center;
+  padding: 30px;
+}
+.sing_up_box input{
+  display: block;
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 10px;
+  border: 1px solid #cacaca;
+  border-radius: 5px;
+}
+.sing_up_box .h4-blue{
+  color: #136ffb;
+}
+.sing_up_box ::placeholder{
+  color: #cacaca;
+  font-size: 20px;
+}
+.btn_blue:hover{
+  color: #fff;
+  background-color: #001ac2;
+}
+.btn_google:hover{
+  box-shadow: 7px 6px 15px #cacaca;
+  font-size: 19px;
+}
+.sing_up_box p{
+  color: #000;
+  line-height: normal;
+  font-size: 18px;
+  margin-top: 20px;
+}
+.sing_up_box small a{
+  text-decoration: underline;
+  color: #136ffb;
+}
+/* SECTIONS */
+section p{
+  font-size: 20px;
+  color: #5b6987;
+  font-weight: 100;
+}
+section{
+  padding: 120px 0;
+}
+/* section trust */
+#trust{
+  padding: 65px 0;
+}
+.customer_logo img{
+  width: calc((100% / 6) - 4px);
+  padding: 15px;
+  vertical-align: middle;
+}
+#trust a{
+  color: #136ffb;
+  font-size: 18px;
+}
+#trust a i{
+  margin-left: 5px;
+}
+/* section deploy&scale */
+.deploy_box{
+  min-height: 220px;
+  padding-right: 15px;
+}
+.deploy-elements li{
+  list-style: none;
+  border-left: 1px solid #5b6987;
+}
+.deploy-elements a{
+  font-size: 18px;
+  padding-left: 20px;
+  line-height: 70px;
+  color: #5b6987;
+}
+.deploy-elements{
+  margin-top: 50px;
+}
+.deploy-elements img{
+  min-width: 45px;
+  margin-bottom: 20px;
+}
+.deploy-elements p{
+  font-size: 16px;
+  line-height: 25px;
+  color: #5b6987;
+}
+.deploy-elements li:hover{
+  border-left: 2px solid #136ffb;
+}
+.deploy-elements a:hover{
+  text-decoration: none;
+  color: #031b4e;
+}
+/* section designedFORdevelopers*/
+.box{
+  display: inline-block;
+  vertical-align: middle;
+}
+.arrow{
+  width: 10%;
+  font-size: 60px;
+}
+.box-2{
+  width: 80%;
+  margin-bottom: 30px;
+  margin-top: 40px;
+}
+.box-2 img{
+  width: 100%;
+}
+.box-1{
+  color: #5b6987;
+}
+.box-3{
+  color: #031b4e;
+}
+.bullets{
+  margin-top: 30px;
+  color: #136ffb;
+}
+/* section features */
+.features_box a{
+  font-size: 16px;
+  color: #136ffb;
+  margin-top: 20px;
+}
+.features_box{
+  margin-top: 50px;
+}
+.features_box img{
+  min-width: 45px;
+  margin-bottom: 20px;
+}
+.features_box p{
+  font-size: 16px;
+  line-height: 25px;
+  color: #5b6987;
+}
+  .features_box i{
+  margin-left: 5px;
+  font-size: 13px;
+  }
+/* section aroundTHEworld */
+#aroundTHEworld{
+  background-color: #031b4e;
+  background-image: url("../img/digitalocean/bg-map.svg");
+  background-size: cover;
+  background-position: 50% 50%;
+}
+#aroundTHEworld h2{
+  color: #fff;
+}
+.region:not(:last-of-type){
+  border-bottom: 1px solid #fff;
+}
+.graphic{
+  margin-top: 30px;
+  padding: 40px;
+}
+.region{
+  padding-top: 10px;
+}
+.region p{
+font-size: 16px;
+color: #fff;
+}
+.cap p{
+  font-weight: 700;
+}
+.region a{
+  color: #00d7d2;
+}
+/* section loveDigitalOcean */
+.main_carousel_2{
+  background-color: #fff;
+  padding: 70px 30px;
+}
+.main_carousel_2 img{
+  max-width: 70%;
+  margin-bottom: 30px;
+}
+.main_carousel_2 small{
+  font-size: 13px;
+  color: #000;
+  margin-bottom: 40px;
+}
+.main_carousel_2 a{
+  color: #136ffb;
+  font-size: 18px;
+}
+.main_carousel_2 a i{
+  margin-left: 5px;
+}
+/* section getStarted */
+#getStarted{
+  background: rgb(28,0,91);
+  background: linear-gradient(180deg, rgba(28,0,91,1) 0%, rgba(0,76,170,1) 100%, rgba(36,0,255,1) 100%);
+}
+#getStarted h2{
+  color: #fff;
+}
+/* footer */
+footer{
+  background-color: #031e42;
+  color: #fff;
+  padding:30px 0;
+}
+.list_footer li{
+  list-style: none;
+}
+.list_footer a{
+  color: #fff;
+}
+.list_footer{
+  margin-top: 20px;
+}
+.footer_left p{
+  color: #c4d4f5;
+}
+.footer_left a{
+  color: #c4d4f5;
+}
+.footer_left img{
+  max-width: 50px;
+  margin-bottom: 20px;
+}
+/* help button */
+.SammyShark{
+  width: 80px;
+  height: 80px;
+  background-color: #1200f4;
+  background-image: url("../img/digitalocean/Sammy_Shark.png");
+  background-size: 98%;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  border-radius: 10px;
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  z-index: 5;
+}
+.notifications{
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: red;
+  border: 3px solid #fff;
+  position: absolute;
+  left: 60px;
+  bottom: 60px;
+}
+.notifications p{
+  color: #fff;
+  font-weight: 700;
+  text-align: center;
+  line-height: 25px;
+}
+.question{
+  max-width: 300px;
+  position: fixed;
+  bottom: 30px;
+  right: 150px;
+  z-index: 5;
+  display: none;
+}
+.question p{
+  font-size: 18px;
+  background-color: #f4f9e0;
+  color: #031e42;
+  padding:15px;
+  border-radius: 15px;
+}
+.question::after{
+  content: "";
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-left: 10px solid #f4f9e0;
+  position: absolute;
+  left: 299px;
+  bottom: 25px;
+}
+.helpbutton:hover .question{
+  display: block;
+}
+.helpbutton:hover .notifications{
+  display: none;
+}
+/* @@ media @@ */
+@media screen and (max-width: 992px){
+  .carousel h5{
+    margin:30px 0;
+  }
+}
+@media screen and (max-width: 768px){
+  .hero_title{
+    margin: 50px 0 20px 0;
+  }
+  .sing_up_box{
+    margin: 20px 0 50px 0;
+  }
+  .customer_logo img{
+    width: calc((100% / 2) - 4px);
+    padding: 40px;
+  }
+  .carousel .arrow{
+    display: none;
+  }
+  .carousel .box-2{
+    position: relative;
+    left: 10%;;
+  }
+  .bullets{
+    margin-top: 60px;
+  }
+  .SammyShark{
+    bottom: 150px;
+    left: 40px;
+  }
+  .question{
+    bottom: 35px;
+    left: 40px;
+  }
+  .question::after{
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid #f4f9e0;
+    top: -19px;
+    left: 25px;
+    z-index: 100;
+  }
+}

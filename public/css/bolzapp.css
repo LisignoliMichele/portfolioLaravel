@@ -1,0 +1,270 @@
+/* reset */
+*{
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+}
+
+/* mix */
+.container{
+   width: 100%;
+   height: 100vh;
+   background: linear-gradient(to top, #DBDBD2 80%, #009688 80%);
+   display: flex;
+}
+.appWindow{
+   width: 80%;
+   height: 90%;
+   margin: auto;
+   display: flex;
+   border-radius: 10px;
+   overflow: hidden;
+   font-family: 'Lato', sans-serif;
+   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+}
+.contacts{
+   width: 35%;
+   height: 100%;
+   background-color: #fafafa;
+   border-right: 1px solid #cacaca;
+   display: flex;
+   flex-direction: column;
+}
+.chat{
+   width: 65%;
+   height: 100%;
+   background-color: white;
+   display: flex;
+   flex-direction: column;
+}
+
+/* top nav bars */
+.contactsNav,
+.chatNav{
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   min-height: 80px;
+   background-color: #EAEAEA;
+   padding:0 25px;
+}
+.contacts img,
+.chatNav img{
+   max-width: 50px;
+   border-radius: 50%;
+   margin-right: 12px;
+}
+.contactsNav .settings ul,
+.chatNav .settings ul{
+   list-style: none;
+   display: flex;
+}
+.contactsNav .userInfo,
+.chatNav .userInfo{
+   display: flex;
+   font-size: 20px;
+   align-items: center;
+}
+.contactsNav .settings ul i,
+.chatNav .settings ul i{
+   margin-left: 20px;
+   font-size: 20px;
+   color: #B1B1B1;
+   cursor: pointer;
+}
+.contactsNav .settings ul i:hover,
+.chatNav .settings ul i:hover{
+   color: #6B7376;
+}
+
+/* ACTIVE NOTIFICATIONS */
+.notifications{
+   background-color: #8EDAFC;
+   display: flex;
+   align-items: center;
+   min-height: 90px;
+   padding:0 25px;
+}
+.notifications .icon{
+   min-width: 50px;
+   min-height: 50px;
+   background-color: #fff;
+   color: #8EDAFC;
+   border-radius: 50%;
+   font-size: 25px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   margin-right: 15px;
+}
+.notifications a{
+   color: #6B7376;
+}
+.notifications a:hover{
+   color: #000;
+}
+/* SEARCH CONTACT */
+.searchContact{
+   display: flex;
+   padding: 10px;
+   height: 60px;
+}
+.searchContact .icon{
+   width: 15%;
+   background-color: #fff;
+   text-align: center;
+   color: #B1B1B1;
+   border: 1px solid #fafafa;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+.searchContact .input{
+   border: 1px solid #fafafa;
+   background-color: #fff;
+   border-left: transparent;
+   width: 85%;
+   display: flex;
+   align-items: center;
+}
+.searchContact .input input{
+   border: transparent;
+   width: 100%;
+   margin-left: 30px;
+   
+}
+.searchContact .input input:focus{
+   outline: transparent;
+}
+
+/* CONTACTS LIST */
+.contact-list{
+   overflow: scroll;
+}
+.contact-list li{
+   height: 100px;
+   width: 100%;
+   background-color: #ffff;
+   display: flex;
+   border-top: 1px solid #EAEAEA;
+   align-items: center;
+}
+.contact-list li img{
+   margin-left: 25px;
+}  
+.contact-list li:hover{
+   background-color: #fafafa;
+}
+.contact-list li.active{
+   background-color: #EAEAEA;
+}
+
+/* ChatRoom */
+.chatRoom{
+  background-image: url("../img/boolzapp/mine.jpg");
+  overflow: scroll;
+  margin: auto;
+  height: 100%;
+  width: 100%;
+}
+.chatRoom .messages{
+   height: 100%;
+   width: 100%;
+   padding: 50px 60px 0 60px
+}
+.chatRoom .messages ul{
+   list-style: none;
+   display: flex;
+   flex-direction: column;
+}
+.chatRoom .messages li{
+   max-width: 60%;
+   min-width: 25%;
+   margin-bottom: 20px;
+   padding: 20px;
+   border-radius: 10px;
+   position: relative;
+   background-color: #ffffff;
+   align-self: flex-start;
+}
+.chatRoom .messages li.sented{
+   background-color: #D5F9BA;
+   align-self: flex-end;
+}
+.chatRoom .messages li time{
+   position: absolute;
+   bottom: 5px;
+   right:10px;
+   font-size: 9px;
+}
+.messages li .messageSettings{
+   font-size: 14px;
+   color: #6B7376;
+   position: absolute;
+   top: 0px;
+   right: 7px;
+   display: none;
+}
+.messages li:hover .messageSettings{
+   display: block;
+}
+.messages li .messageSettings i{
+   position: relative;
+   cursor: pointer;
+}
+.dropDownMenu{
+   position: absolute;
+   white-space: nowrap;
+   left: -114px;
+   top: 22px;
+   background-color: #ffffff;
+   box-shadow: 0px 0 5px;
+   padding: 10px;
+   border-radius: 7px;
+   cursor: pointer;
+   display: none;
+}
+.visible{
+   display: block;
+}
+.hide{
+   display: none;
+}
+.dropDownMenu p:hover{
+   background-color: #eaeaea;
+}
+.dropDownMenu p:active{
+   background-color: #cacaca;
+}
+/* messageInput */
+.messageInput{
+   width: 100%;
+   min-height: 60px;
+   background-color: #EAEAEA;
+   display: flex;
+   justify-content: space-between;
+   padding: 0 25px;
+   align-items: center;
+}
+.messageInput .textInput{
+   width: 90%;
+   border-radius: 5px;
+   overflow: hidden;
+}
+.messageInput .textInput input{
+   border: transparent;
+   height: 40px;
+   width: 100%;
+   padding-left: 40px;
+}
+.messageInput .textInput input:focus{
+   outline: transparent;
+}
+.messageInput i{
+   font-size: 25px;
+   color: #B1B1B1;
+   cursor: pointer;
+}
+.messageInput i:hover{
+   color: #6B7376
+}

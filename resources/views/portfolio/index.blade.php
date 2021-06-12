@@ -1,7 +1,15 @@
 @extends('portfolio/layouts/main')
 @section('PageFonts')
-<link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Oxygen&family=Ranchers&display=swap" rel="stylesheet">
+<link rel="preconnect" href="//fonts.gstatic.com">
+<link href="//fonts.googleapis.com/css2?family=Oxygen&family=Ranchers&display=swap" rel="stylesheet">
+@endsection
+@section('favicon')
+<link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+<link rel="manifest" href="img/site.webmanifest">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
 @endsection
 @section('cdns')
 <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
@@ -36,10 +44,10 @@
     <nav class="navbar">
       <div class="container">
         <div class="logo">
-          <div><strong class="my">My</strong>portfolio</div>
+          <a href="#home"> <strong class="my">My</strong>portfolio</a>
         </div>
         <ul class="portfolioPages">
-          <li><a href="#">Home</a></li>
+          <li><a href="#home">Home</a></li>
           <li><a href="#aboutMe">About me</a></li>
           <li><a href="#projects">Projects</a></li>
           <li><a href="#contacts">Contacts</a></li>
@@ -49,7 +57,7 @@
   </header>
   <main>
     {{-- HOME --}}
-    <div class="home">
+    <div id="home">
       {{-- home Lyrics --}}
       <div class="helloworld">
         <div class="hello">
@@ -148,11 +156,13 @@
           <div v-for="proj in projects" class="cell">
             <div class="cell-content">
               <h3>@{{proj.name}}</h3>
-              <p>@{{proj.description}}</p>
+              <div class="webPage">
+                <img :src="proj.webPage" alt="webPage">
+              </div>
               <h5>Realized with</h5>
               <small>@{{proj.tecnologies}}</small>
               <div class="btn">
-                <a href="#">Go to the app</a>
+                <a :href="proj.url">View</a>
               </div>
             </div>
           </div>     
@@ -161,22 +171,22 @@
      <!-- /CAROUSEL -->
     </section>
     {{-- //MY PROJECTS --}}
-     {{-- MY PROJECTS --}}
+     {{-- CONTACTS --}}
      <section id="contacts">
-      <h2>Contacts</h2>
-       <div class="aboutHat">
-          <div class="photoContacts">
-            <img src="img/abouthead.jpg" alt="Me young">
-            <img class="myshape" src="img/myshirt.png" alt="My shirt">
-          </div>
+      <div class="smallContainer">
+        <h2>Contacts</h2>
+        <div class="photoContacts">
+          <img src="img/abouthead.jpg" alt="Me young">
+          <img class="myshape" src="img/myshirt.png" alt="My shirt">
         </div>
+      </div>
     </section>
-    {{-- //MY PROJECTS --}}
+    {{-- //CONTACTS --}}
   </main>
 </div>
 @endsection
 @section('js')
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.2/TweenMax.min.js"></script>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.2/utils/Draggable.min.js'></script>
-<script src="{{secure_asset("js/portfolio.js")}}"></script>
+<script src="{{asset("js/portfolio.js")}}"></script>
 @endsection

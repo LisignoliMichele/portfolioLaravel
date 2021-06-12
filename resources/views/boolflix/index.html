@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <link rel="stylesheet" href="css/boolflix.css">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <!-- development version, includes helpful console warnings -->
+      <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+      <!-- gfont -->
+      <link rel="preconnect" href="https://fonts.gstatic.com">
+      <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+      <!-- axios cdn -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js" integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ==" crossorigin="anonymous"></script>
+      <!-- fontawesome -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+      <title>boolflix</title>
+   </head>
+   <body>
+      <div id="app">
+         <div class="opening">
+            <img src="img/boolflix/logo_B_Boolflix.png" alt="logo_boolflix">
+         </div>
+         <!-- HEADER NAV-->
+         <header>
+            <div class="container navBar">
+               <nav>
+                  <!-- LOGO -->
+                  <div class="logo left">
+                     <img src="img/boolflix/boolflix.png" alt="boolflix logo">
+                  </div>
+                  <!-- LOGO -->
+                  <div class="right">
+                     <!-- SEARCH AND SELECT -->
+                     <div :class="styleSearchBg" class="search">
+                        <label @click="searchActive" class="searchIcon" for="searchInput"><i class="fas fa-search"></i></label>
+                        <input @keypress="showXdelete" :class="styleSearchWw" class="searchInput" id="searchInput" v-model="search" type="text" :placeholder="languages[languagesIndex].placeholder" @keydown.13="getMovie">
+                        <div :class="styleCancel__X" @click="xDelete" class="cancel__X"><i class="fas fa-times"></i></div>
+                     </div>
+                     <div class='languages'>
+                        <select  v-model="languagesIndex" @change="getMovie">
+                           <option v-for="(language, index) in languages" :value="index">{{language.name}}</option>
+                        </select>
+                     </div>
+                     <!-- /SEARCH AND SELECT -->
+                  </div>
+               </nav>
+            </div>
+         </header>
+         <!-- HEADER NAV-->
+         <main>
+            <!-- TV SERIES  -->
+            <section v-if="series.length != 0" class="series_section">
+               <!-- section top -->
+               <nav class="sectionNav">
+                  <h2>{{languages[languagesIndex].sectionTvTitle}}</h2>
+                  <select  v-if="genersTV.length > 0"  v-model="selectedTvGenre">
+                     <option value="">Tutti i generi</option>
+                     <option v-for="genre in genersTV" :value="genre.id">{{genre.name}}</option>
+                  </select>
+               </nav>
+               <!-- /section top -->
+               <!-- section main -->
+               <div v-dragscroll class="series">
+                  <div class="movie" v-for="(serie, index) in series" @click="serieIndex = index" v-on:mouseleave="seriesCast = []" v-if="serie.poster_path != null" class="serie">
+                     <!--poster -->
+                     <div class="poster">
+                        <img :src="'https://image.tmdb.org/t/p/w500' + serie.poster_path" :alt="serie.name">
+                     </div>
+                     <!--/poster -->
+                     <!-- info -->
+                     <div class="info">
+                        <div class="chack">
+                           <div class="chack_bottom">
+                              <img src="img/boolflix/chack_bottom.png" alt="chack bottom">
+                           </div>
+                           <div class="chack_top">
+                              <img src="img/boolflix/chack_top.png" alt="chack top">
+                           </div>
+                        </div>
+                        <div class="flag">
+                           <img v-if="flags.includes(serie.original_language)" :src="'img/boolflix/' + serie.original_language + '.png'">
+                           <img  v-else src="img/boolflix/pirateFlag.png">
+                        </div>
+                        <p>{{languages[languagesIndex].title}}: <br><strong>{{serie.name}}</strong></p>
+                        <p>{{languages[languagesIndex].originalName}}: <br><strong>{{serie.original_name}}</strong></p>
+                        <p v-if=" serie.vote_average > 0">{{languages[languagesIndex].vote}}: <br><strong><i v-for=" n in serie.vote_average" class="fas fa-star"></i></strong></p>
+                        <p v-if="serie.overview != ''" >{{languages[languagesIndex].overview}}:<br>{{serie.overview}}</p>
+                        <div class="characters">
+                           <button @click="getTvCredits">{{languages[languagesIndex].charactersButton}}</button>
+                           <ul v-if="seriesCast.length != 0">
+                              <li v-for="character in seriesCast ">{{character}}</li>
+                           </ul>
+                        </div>
+                     </div>
+                     <!-- /info -->
+                  </div>
+               </div>
+               <!-- /section main -->
+            </section>
+            <!-- /TV SERIES  -->
+            <!-- MOVIES  -->
+            <section v-if="movies.length != 0" class="movies_section">
+               <!-- section top -->
+               <nav class="sectionNav">
+                  <h2>{{languages[languagesIndex].sectionMoviesTitle}}</h2>
+                  <select  v-if="genersMovie.length > 0"  v-model="selectedMoviesGenre">
+                     <option value="">Tutti i generi</option>
+                     <option v-for="genre in genersMovie" :value="genre.id">{{genre.name}}</option>
+                  </select>
+               </nav>
+               <!-- /section top -->
+               <!-- section main -->
+               <div v-dragscroll class="movies">
+                  <div class="movie" v-for="(movie, index) in movies" @click="moviesIndex = index" v-on:mouseleave="moviesCast = []" v-if="movie.poster_path != null" class="movie">
+                     <!--poster -->
+                     <div class="poster">
+                        <img :src="'https://image.tmdb.org/t/p/w500' + movie.poster_path" :alt="movie.title">
+                     </div>
+                     <!--/poster -->
+                     <!-- info -->
+                     <div class="info">
+                        <div class="chack">
+                           <div class="chack_bottom">
+                              <img src="img/boolflix/chack_bottom.png" alt="chack bottom">
+                           </div>
+                           <div class="chack_top">
+                              <img src="img/boolflix/chack_top.png" alt="chack top">
+                           </div>
+                        </div>
+                        <div class="flag">
+                           <img v-if="flags.includes(movie.original_language)" :src="'img/boolflix/' + movie.original_language + '.png'">
+                           <img  v-else src="img/boolflix/pirateFlag.png">
+                        </div>
+                        <p>{{languages[languagesIndex].title}}: <br><strong>{{movie.title}}</strong></p>
+                        <p>{{languages[languagesIndex].originalName}}: <br><strong>{{movie.original_title}}</strong></p>
+                        <p v-if=" movie.vote_average > 0">{{languages[languagesIndex].vote}}: <br><strong><i v-for=" n in movie.vote_average" class="fas fa-star"></i></strong></p>
+                        <p v-if="movie.overview != ''" >{{languages[languagesIndex].overview}}:<br>{{movie.overview}}</p>
+                        <div class="characters">
+                           <button @click="getMovieCredits">{{languages[languagesIndex].charactersButton}}</button>
+                           <ul v-if="moviesCast.length != 0">
+                              <li v-for="character in moviesCast ">{{character}}</li>
+                           </ul>
+                        </div>
+                     </div>
+                     <!-- /info -->
+                  </div>
+               </div>
+               <!-- /section main -->
+            </section>
+            <!-- MOVIES  -->
+         </main>
+      </div>
+      <script src="https://unpkg.com/vue"></script>
+      <script src="https://unpkg.com/vue-dragscroll"></script>
+      <script src="js/boolflix.js"></script>
+   </body>
+</html>

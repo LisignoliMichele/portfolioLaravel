@@ -25,8 +25,11 @@
       align-items: center;
       justify-content: space-between;
       .logo{
-         color: #ffffff;
-         font-size: 20px;
+         a{
+            text-decoration: none;
+            color: #ffffff;
+            font-size: 20px;
+         }
          .my{
             margin-right: 5px;
             position: relative;

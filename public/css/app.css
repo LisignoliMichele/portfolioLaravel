@@ -439,7 +439,8 @@ section h2 {
   align-items: center;
   justify-content: space-between;
 }
-.navbar .container .logo {
+.navbar .container .logo a {
+  text-decoration: none;
   color: #ffffff;
   font-size: 20px;
 }
@@ -581,12 +582,12 @@ section h2 {
   }
 }
 
-.home {
+#home {
   display: flex;
   height: 100vh;
   position: relative;
 }
-.home #keyboardsBG {
+#home #keyboardsBG {
   position: absolute;
   z-index: -20;
   position: absolute;
@@ -596,18 +597,18 @@ section h2 {
   -o-object-fit: cover;
      object-fit: cover;
 }
-.home .helloworld {
+#home .helloworld {
   margin: auto;
   text-align: right;
   padding-top: 50px;
 }
-.home .helloworld .hello {
+#home .helloworld .hello {
   font-size: 40px;
   color: #ffffff;
   display: flex;
   justify-content: flex-end;
 }
-.home .helloworld .hello :nth-child(1) {
+#home .helloworld .hello :nth-child(1) {
   -webkit-animation-name: helloworld1;
           animation-name: helloworld1;
   -webkit-animation-duration: 6s;
@@ -637,7 +638,7 @@ section h2 {
     opacity: 1;
   }
 }
-.home .helloworld .hello :nth-child(2) {
+#home .helloworld .hello :nth-child(2) {
   -webkit-animation-name: helloworld2;
           animation-name: helloworld2;
   -webkit-animation-duration: 6s;
@@ -667,7 +668,7 @@ section h2 {
     opacity: 1;
   }
 }
-.home .helloworld .hello :nth-child(3) {
+#home .helloworld .hello :nth-child(3) {
   -webkit-animation-name: helloworld3;
           animation-name: helloworld3;
   -webkit-animation-duration: 6s;
@@ -697,7 +698,7 @@ section h2 {
     opacity: 1;
   }
 }
-.home .helloworld .hello :nth-child(4) {
+#home .helloworld .hello :nth-child(4) {
   -webkit-animation-name: helloworld4;
           animation-name: helloworld4;
   -webkit-animation-duration: 6s;
@@ -727,7 +728,7 @@ section h2 {
     opacity: 1;
   }
 }
-.home .helloworld .hello :nth-child(5) {
+#home .helloworld .hello :nth-child(5) {
   -webkit-animation-name: helloworld5;
           animation-name: helloworld5;
   -webkit-animation-duration: 6s;
@@ -758,7 +759,7 @@ section h2 {
     opacity: 1;
   }
 }
-.home .helloworld .hello :nth-child(6) {
+#home .helloworld .hello :nth-child(6) {
   -webkit-animation-name: helloworld6;
           animation-name: helloworld6;
   -webkit-animation-duration: 6s;
@@ -788,7 +789,7 @@ section h2 {
     opacity: 1;
   }
 }
-.home .helloworld .hello :nth-child(7) {
+#home .helloworld .hello :nth-child(7) {
   -webkit-animation-name: helloworld7;
           animation-name: helloworld7;
   -webkit-animation-duration: 6s;
@@ -818,7 +819,7 @@ section h2 {
     opacity: 1;
   }
 }
-.home .helloworld .hello :nth-child(8) {
+#home .helloworld .hello :nth-child(8) {
   -webkit-animation-name: helloworld8;
           animation-name: helloworld8;
   -webkit-animation-duration: 6s;
@@ -848,7 +849,7 @@ section h2 {
     opacity: 1;
   }
 }
-.home .helloworld .hello :nth-child(9) {
+#home .helloworld .hello :nth-child(9) {
   -webkit-animation-name: helloworld9;
           animation-name: helloworld9;
   -webkit-animation-duration: 6s;
@@ -878,7 +879,7 @@ section h2 {
     opacity: 1;
   }
 }
-.home .helloworld .hello :nth-child(10) {
+#home .helloworld .hello :nth-child(10) {
   -webkit-animation-name: helloworld10;
           animation-name: helloworld10;
   -webkit-animation-duration: 6s;
@@ -908,7 +909,7 @@ section h2 {
     opacity: 1;
   }
 }
-.home .helloworld .hello :nth-child(11) {
+#home .helloworld .hello :nth-child(11) {
   margin-right: 15px;
   -webkit-animation-name: helloworld11;
           animation-name: helloworld11;
@@ -939,7 +940,7 @@ section h2 {
     opacity: 1;
   }
 }
-.home .helloworld .hello :nth-child(12) {
+#home .helloworld .hello :nth-child(12) {
   margin-right: 10px;
   -webkit-animation-name: helloworld12;
           animation-name: helloworld12;
@@ -970,7 +971,7 @@ section h2 {
     opacity: 1;
   }
 }
-.home .helloworld .hello :nth-child(13) {
+#home .helloworld .hello :nth-child(13) {
   -webkit-animation-name: helloworld13;
           animation-name: helloworld13;
   -webkit-animation-duration: 6s;
@@ -1000,7 +1001,7 @@ section h2 {
     opacity: 1;
   }
 }
-.home .helloworld .hello :nth-child(14) {
+#home .helloworld .hello :nth-child(14) {
   -webkit-animation-name: helloworld14;
           animation-name: helloworld14;
   -webkit-animation-duration: 6s;
@@ -1030,15 +1031,15 @@ section h2 {
     opacity: 1;
   }
 }
-.home .helloworld .michele,
-.home .helloworld .lisignoli {
+#home .helloworld .michele,
+#home .helloworld .lisignoli {
   color: #ffffff;
   font-family: "Ranchers", cursive;
   display: flex;
   justify-content: flex-end;
   font-size: 150px;
 }
-.home .helloworld .michele :nth-child(1) {
+#home .helloworld .michele :nth-child(1) {
   -webkit-animation-name: rotateMIC1;
           animation-name: rotateMIC1;
   -webkit-animation-duration: 6s;
@@ -1082,7 +1083,7 @@ section h2 {
     opacity: 1;
   }
 }
-.home .helloworld .michele :nth-child(2) {
+#home .helloworld .michele :nth-child(2) {
   -webkit-animation-name: rotateMIC2;
           animation-name: rotateMIC2;
   -webkit-animation-duration: 6s;
@@ -1144,7 +1145,7 @@ section h2 {
     transform: scale(1);
   }
 }
-.home .helloworld .michele :nth-child(3) {
+#home .helloworld .michele :nth-child(3) {
   -webkit-animation-name: rotateMIC3;
           animation-name: rotateMIC3;
   -webkit-animation-duration: 6s;
@@ -1188,7 +1189,7 @@ section h2 {
     opacity: 1;
   }
 }
-.home .helloworld .michele :nth-child(4) {
+#home .helloworld .michele :nth-child(4) {
   -webkit-animation-name: rotateMIC4;
           animation-name: rotateMIC4;
   -webkit-animation-duration: 6s;
@@ -1232,7 +1233,7 @@ section h2 {
     opacity: 1;
   }
 }
-.home .helloworld .michele :nth-child(5) {
+#home .helloworld .michele :nth-child(5) {
   -webkit-animation-name: rotateMIC5;
           animation-name: rotateMIC5;
   -webkit-animation-duration: 6s;
@@ -1276,7 +1277,7 @@ section h2 {
     opacity: 1;
   }
 }
-.home .helloworld .michele :nth-child(6) {
+#home .helloworld .michele :nth-child(6) {
   -webkit-animation-name: rotateMIC6;
           animation-name: rotateMIC6;
   -webkit-animation-duration: 6s;
@@ -1320,7 +1321,7 @@ section h2 {
     opacity: 1;
   }
 }
-.home .helloworld .michele :nth-child(7) {
+#home .helloworld .michele :nth-child(7) {
   -webkit-animation-name: rotateMIC7;
           animation-name: rotateMIC7;
   -webkit-animation-duration: 6s;
@@ -1386,7 +1387,7 @@ section h2 {
     transform: rotate(0deg);
   }
 }
-.home .helloworld .lisignoli :nth-child(1) {
+#home .helloworld .lisignoli :nth-child(1) {
   -webkit-animation-name: rotateLIS1;
           animation-name: rotateLIS1;
   -webkit-animation-duration: 6s;
@@ -1428,7 +1429,7 @@ section h2 {
     transform: rotate(0deg);
   }
 }
-.home .helloworld .lisignoli :nth-child(2) {
+#home .helloworld .lisignoli :nth-child(2) {
   -webkit-animation-name: rotateLIS2;
           animation-name: rotateLIS2;
   -webkit-animation-duration: 6s;
@@ -1470,7 +1471,7 @@ section h2 {
     transform: rotate(0deg);
   }
 }
-.home .helloworld .lisignoli :nth-child(3) {
+#home .helloworld .lisignoli :nth-child(3) {
   -webkit-animation-name: rotateLIS3;
           animation-name: rotateLIS3;
   -webkit-animation-duration: 6s;
@@ -1512,7 +1513,7 @@ section h2 {
     transform: rotate(0deg);
   }
 }
-.home .helloworld .lisignoli :nth-child(4) {
+#home .helloworld .lisignoli :nth-child(4) {
   -webkit-animation-name: rotateLIS4;
           animation-name: rotateLIS4;
   -webkit-animation-duration: 6s;
@@ -1574,7 +1575,7 @@ section h2 {
     transform: rotate(0deg);
   }
 }
-.home .helloworld .lisignoli :nth-child(5) {
+#home .helloworld .lisignoli :nth-child(5) {
   -webkit-animation-name: rotateLIS5;
           animation-name: rotateLIS5;
   -webkit-animation-duration: 6s;
@@ -1616,7 +1617,7 @@ section h2 {
     transform: rotate(0deg);
   }
 }
-.home .helloworld .lisignoli :nth-child(6) {
+#home .helloworld .lisignoli :nth-child(6) {
   -webkit-animation-name: rotateLIS6;
           animation-name: rotateLIS6;
   -webkit-animation-duration: 6s;
@@ -1660,7 +1661,7 @@ section h2 {
     opacity: 1;
   }
 }
-.home .helloworld .lisignoli :nth-child(7) {
+#home .helloworld .lisignoli :nth-child(7) {
   -webkit-animation-name: rotateLIS7;
           animation-name: rotateLIS7;
   -webkit-animation-duration: 6s;
@@ -1704,7 +1705,7 @@ section h2 {
     opacity: 1;
   }
 }
-.home .helloworld .lisignoli :nth-child(8) {
+#home .helloworld .lisignoli :nth-child(8) {
   -webkit-animation-name: rotateLIS8;
           animation-name: rotateLIS8;
   -webkit-animation-duration: 6s;
@@ -1764,7 +1765,7 @@ section h2 {
     transform: rotate(0deg);
   }
 }
-.home .helloworld .lisignoli :nth-child(9) {
+#home .helloworld .lisignoli :nth-child(9) {
   -webkit-animation-name: rotateLIS9;
           animation-name: rotateLIS9;
   -webkit-animation-duration: 6s;
@@ -1808,14 +1809,14 @@ section h2 {
     opacity: 1;
   }
 }
-.home .helloworld .webDeveloper {
+#home .helloworld .webDeveloper {
   font-size: 30px;
   color: #ffffff;
   display: flex;
   justify-content: flex-end;
   margin-top: 20px;
 }
-.home .helloworld .webDeveloper :nth-child(1) {
+#home .helloworld .webDeveloper :nth-child(1) {
   -webkit-animation-name: webdev1;
           animation-name: webdev1;
   -webkit-animation-duration: 10s;
@@ -1845,7 +1846,7 @@ section h2 {
     opacity: 1;
   }
 }
-.home .helloworld .webDeveloper :nth-child(2) {
+#home .helloworld .webDeveloper :nth-child(2) {
   -webkit-animation-name: webdev2;
           animation-name: webdev2;
   -webkit-animation-duration: 10s;
@@ -1875,7 +1876,7 @@ section h2 {
     opacity: 1;
   }
 }
-.home .helloworld .webDeveloper :nth-child(3) {
+#home .helloworld .webDeveloper :nth-child(3) {
   -webkit-animation-name: webdev3;
           animation-name: webdev3;
   -webkit-animation-duration: 10s;
@@ -1906,7 +1907,7 @@ section h2 {
     opacity: 1;
   }
 }
-.home .helloworld .webDeveloper :nth-child(4) {
+#home .helloworld .webDeveloper :nth-child(4) {
   -webkit-animation-name: webdev4;
           animation-name: webdev4;
   -webkit-animation-duration: 10s;
@@ -1936,7 +1937,7 @@ section h2 {
     opacity: 1;
   }
 }
-.home .helloworld .webDeveloper :nth-child(5) {
+#home .helloworld .webDeveloper :nth-child(5) {
   -webkit-animation-name: webdev5;
           animation-name: webdev5;
   -webkit-animation-duration: 10s;
@@ -1966,7 +1967,7 @@ section h2 {
     opacity: 1;
   }
 }
-.home .helloworld .webDeveloper :nth-child(6) {
+#home .helloworld .webDeveloper :nth-child(6) {
   -webkit-animation-name: webdev6;
           animation-name: webdev6;
   -webkit-animation-duration: 10s;
@@ -1997,7 +1998,7 @@ section h2 {
     opacity: 1;
   }
 }
-.home .helloworld .webDeveloper :nth-child(7) {
+#home .helloworld .webDeveloper :nth-child(7) {
   -webkit-animation-name: webdev7;
           animation-name: webdev7;
   -webkit-animation-duration: 10s;
@@ -2027,7 +2028,7 @@ section h2 {
     opacity: 1;
   }
 }
-.home .helloworld .webDeveloper :nth-child(8) {
+#home .helloworld .webDeveloper :nth-child(8) {
   -webkit-animation-name: webdev8;
           animation-name: webdev8;
   -webkit-animation-duration: 10s;
@@ -2057,7 +2058,7 @@ section h2 {
     opacity: 1;
   }
 }
-.home .helloworld .webDeveloper :nth-child(9) {
+#home .helloworld .webDeveloper :nth-child(9) {
   -webkit-animation-name: webdev9;
           animation-name: webdev9;
   -webkit-animation-duration: 10s;
@@ -2087,7 +2088,7 @@ section h2 {
     opacity: 1;
   }
 }
-.home .helloworld .webDeveloper :nth-child(10) {
+#home .helloworld .webDeveloper :nth-child(10) {
   -webkit-animation-name: webdev10;
           animation-name: webdev10;
   -webkit-animation-duration: 10s;
@@ -2117,7 +2118,7 @@ section h2 {
     opacity: 1;
   }
 }
-.home .helloworld .webDeveloper :nth-child(11) {
+#home .helloworld .webDeveloper :nth-child(11) {
   -webkit-animation-name: webdev11;
           animation-name: webdev11;
   -webkit-animation-duration: 10s;
@@ -2147,7 +2148,7 @@ section h2 {
     opacity: 1;
   }
 }
-.home .helloworld .webDeveloper :nth-child(12) {
+#home .helloworld .webDeveloper :nth-child(12) {
   -webkit-animation-name: webdev12;
           animation-name: webdev12;
   -webkit-animation-duration: 10s;
@@ -2177,7 +2178,7 @@ section h2 {
     opacity: 1;
   }
 }
-.home .helloworld .webDeveloper :nth-child(13) {
+#home .helloworld .webDeveloper :nth-child(13) {
   -webkit-animation-name: webdev13;
           animation-name: webdev13;
   -webkit-animation-duration: 10s;
@@ -2207,7 +2208,7 @@ section h2 {
     opacity: 1;
   }
 }
-.home .helloworld .webDeveloper :nth-child(14) {
+#home .helloworld .webDeveloper :nth-child(14) {
   -webkit-animation-name: webdev14;
           animation-name: webdev14;
   -webkit-animation-duration: 10s;
@@ -2237,7 +2238,7 @@ section h2 {
     opacity: 1;
   }
 }
-.home .helloworld .webDeveloper :nth-child(15) {
+#home .helloworld .webDeveloper :nth-child(15) {
   -webkit-animation-name: webdev15;
           animation-name: webdev15;
   -webkit-animation-duration: 10s;
@@ -2420,7 +2421,7 @@ section h2 {
   position: relative;
   flex-direction: column;
   width: 100%;
-  height: 100vh;
+  height: 80vh;
   overflow: hidden;
   align-items: center;
   justify-content: center;
@@ -2429,7 +2430,7 @@ section h2 {
   position: relative;
   overflow: hidden;
   width: 100%;
-  height: 90vh;
+  height: 60vh;
 }
 #projects .cell {
   position: absolute;
@@ -2437,22 +2438,52 @@ section h2 {
   left: 0;
   width: 100%;
   font-size: 26px;
-  border-radius: 5px;
+  border-radius: 15px;
   font-weight: 500;
   color: rgba(0, 0, 0, 0.87);
   color: rgba(0, 0, 0, 0.92);
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
+  -webkit-user-select: contain;
+     -moz-user-select: contain;
+      -ms-user-select: element;
+          user-select: contain;
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: white;
   height: 100%;
   transform-origin: center bottom;
-  padding: 30px;
 }
+#projects .cell .cell-content {
+  text-align: center;
+}
+#projects .cell .cell-content h3 {
+  font-size: 45px;
+}
+#projects .cell .cell-content .webPage {
+  margin: 25px 0;
+  width: 100%;
+  max-height: 250px;
+  overflow-y: scroll;
+}
+#projects .cell .cell-content .webPage img {
+  width: 100%;
+}
+#projects .cell .cell-content .btn {
+  margin-top: 25px;
+}
+#projects .cell .cell-content .btn a {
+  padding: 5px;
+  border-radius: 10px;
+  color: #071F41;
+  border: 2px solid #071F41;
+  text-decoration: none;
+  transition: 0.6s;
+}
+#projects .cell .cell-content .btn a:hover {
+  background-color: #071F41;
+  color: white;
+}
+
 #contacts .photoContacts {
   width: 25%;
   position: relative;
