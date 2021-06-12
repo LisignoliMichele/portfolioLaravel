@@ -1,3 +1,13 @@
+@font-face {
+   font-family: plyfull;
+   src: url(../fonts/Ranchers-Regular.ttf);
+ }
+
+ @font-face {
+   font-family: oxygen;
+   src: url(../fonts/Oxygen-Regular.ttf);
+ }
+
 // COLORS PALETTE
 $orangePrimary: #ED4534;
 $redPrimary: #BC342C;
@@ -14,5 +24,5 @@ $sectionPadding: 150px 0;
 
 
 // FONT
-$fontPlayful:'Ranchers', cursive;;
-$fontSerious:'Oxygen', sans-serif;;
+$fontPlayful:'plyfull';
+$fontSerious: 'oxygen';

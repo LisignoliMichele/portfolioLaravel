@@ -1,3 +1,11 @@
+@font-face {
+  font-family: plyfull;
+  src: url(../fonts/Ranchers-Regular.ttf);
+}
+@font-face {
+  font-family: oxygen;
+  src: url(../fonts/Oxygen-Regular.ttf);
+}
 * {
   box-sizing: border-box;
   margin: 0;
@@ -14,7 +22,7 @@ html {
 }
 
 body {
-  font-family: "Oxygen", sans-serif;
+  font-family: "oxygen";
 }
 
 .container {
@@ -34,7 +42,7 @@ body {
 }
 
 section h2 {
-  font-family: "Ranchers", cursive;
+  font-family: "plyfull";
   font-size: 100px;
 }
 
@@ -447,7 +455,7 @@ section h2 {
 .navbar .container .logo .my {
   margin-right: 5px;
   position: relative;
-  font-family: "Ranchers", cursive;
+  font-family: "plyfull";
 }
 .navbar .container .logo .my::after {
   content: "";
@@ -1034,7 +1042,7 @@ section h2 {
 #home .helloworld .michele,
 #home .helloworld .lisignoli {
   color: #ffffff;
-  font-family: "Ranchers", cursive;
+  font-family: "plyfull";
   display: flex;
   justify-content: flex-end;
   font-size: 150px;

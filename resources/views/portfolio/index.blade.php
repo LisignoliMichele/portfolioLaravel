@@ -1,8 +1,4 @@
 @extends('portfolio/layouts/main')
-@section('PageFonts')
-<link rel="preconnect" href="//fonts.gstatic.com">
-<link href="//fonts.googleapis.com/css2?family=Oxygen&family=Ranchers&display=swap" rel="stylesheet">
-@endsection
 @section('favicon')
 <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
