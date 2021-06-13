@@ -21,10 +21,13 @@
       padding-top: 50px;
       // HELLOWORLD I'M
       .hello{
-         font-size: 40px;
+         font-size: 30px;
          color: #ffffff;
          display: flex;
          justify-content: flex-end;
+         @media screen and (max-width: 768px){
+            font-size: 18px;
+          }
          & :nth-child(1){
          animation-name: helloworld1;
          animation-duration: 6s;
@@ -94,6 +97,9 @@
          animation-duration: 6s;
          animation-timing-function: linear;
          margin-right: 15px;
+         @media screen and (max-width: 768px){
+            margin-right: 5px;
+          }
          }
          @keyframes helloworld5{
             0%{
@@ -191,6 +197,9 @@
          animation-name: helloworld11;
          animation-duration: 6s;
          animation-timing-function: linear;
+         @media screen and (max-width: 768px){
+            margin-right: 5px;
+          }
          }
          @keyframes helloworld11{
             0%{
@@ -208,6 +217,9 @@
          animation-name: helloworld12;
          animation-duration: 6s;
          animation-timing-function: linear;
+         @media screen and (max-width: 768px){
+            margin-right: 5px;
+          }
             }
          @keyframes helloworld12{
             0%{
@@ -260,7 +272,10 @@
          font-family: $fontPlayful;
          display: flex;
          justify-content: flex-end;
-         font-size: 150px;
+         font-size: 120px;
+         @media screen and (max-width: 768px){
+            font-size: 80px;
+          }
       }
 
       //  ANIMATION MICHELE
@@ -679,6 +694,10 @@
          display: flex;
          justify-content: flex-end;
          margin-top: 20px;
+         @media screen and (max-width: 768px){
+            font-size: 18px;
+            margin-top: 11px;
+          }
          & :nth-child(1){
             animation-name: webdev1;
             animation-duration: 10s;
@@ -716,6 +735,9 @@
             animation-duration: 10s;
             animation-timing-function: linear;
             margin-right: 10px;
+            @media screen and (max-width: 768px){
+               margin-right: 5px;
+             }
          }
          @keyframes webdev3{
             0%{
@@ -766,6 +788,9 @@
             animation-duration: 10s;
             animation-timing-function: linear;
             margin-right: 10px;
+            @media screen and (max-width: 768px){
+               margin-right: 5px;
+             }
          }
          @keyframes webdev6{
             0%{

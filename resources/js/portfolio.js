@@ -2,6 +2,8 @@ var app = new Vue({
   el: "#app",
   data: {
     time: '',
+    burgerActive: '',
+    pagesmobile: '',
     projects: [
       {
         webPage: 'img/ARTIST.png',
@@ -48,6 +50,14 @@ var app = new Vue({
     ],
   },
   methods: {
+    activeMenu: function (){
+      this.burgerActive = "burgeractive";
+      this.pagesmobile = "pagelistActive"
+    },
+    hideMenu: function (){
+      this.burgerActive = "";
+      this.pagesmobile = ""
+    },
     moment: function () {
       return moment();
     },

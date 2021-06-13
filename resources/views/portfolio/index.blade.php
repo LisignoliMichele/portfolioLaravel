@@ -11,6 +11,7 @@
 <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
 <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js" integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 @endsection
 @section('pageTitle')
     Michele Lisignoli Portfolio
@@ -42,12 +43,16 @@
         <div class="logo">
           <a href="#home"> <strong class="my">My</strong>portfolio</a>
         </div>
-        <ul class="portfolioPages">
+        <ul :class="pagesmobile" class="portfolioPages" @click="hideMenu">
           <li><a href="#home">Home</a></li>
           <li><a href="#aboutMe">About me</a></li>
           <li><a href="#projects">Projects</a></li>
           <li><a href="#contacts">Contacts</a></li>
         </ul>
+        <div :class="burgerActive" class="burger">
+          <i class="bars fas fa-bars" @click="activeMenu"></i>
+          <i class="x far fa-times-circle" @click="hideMenu"></i>
+        </div>
     </nav>
     {{-- //NAVBAR --}}
   </header>
@@ -76,7 +81,7 @@
     </div>
     {{-- //HOME --}}
     {{-- INTRO --}}
-    <div class="intro">
+    <div id="intro">
       <div class="smallContainer">
         <div class="introleft">
           <p><span class="date">@{{moment().format("Do-MMM-YY")}}</span> @{{ time }}</p>
@@ -109,21 +114,10 @@
             HTML5, CSS3, SASS, JavaScript, MySQL, PHP, SWIFT, Bootstrap 3/4, jQuery, Vue.js, Laravel, Moment.js, Axios, GSAP</p>
           </div>
         </div>
-        <div class="tecnologies">
-          <div class="content">
-            <p>I started my journey in this environment by learning the following tecnologies:
-            HTML5, CSS3, SASS, JavaScript, MySQL, PHP, SWIFT, Bootstrap 3/4, jQuery, Vue.js, Laravel, Moment.js, Axios, GSAP</p>
-          </div>
-        </div>
         <div class="prevLive">
           <div class="content">
             <p>I've lived for more than 5 years in Thailand, where i leaded as executive chef 4 restaurants, in Bangkok, Chiang Mai and Koh Samui. 
               I've developed great skills to take on many responsibilities, form and motivate a team, relate to clients and colleagues, find solutions quickly and under pressure, managing deadlines and bugets, be organized and integrate into other cultures.</p>
-          </div>
-        </div>
-        <div class="australia">
-          <div class="content">
-            <p>1 year and a half in Sydney, Australia, where I could improve my English</p>
           </div>
         </div>
         <div class="australia">
@@ -169,11 +163,27 @@
     {{-- //MY PROJECTS --}}
      {{-- CONTACTS --}}
      <section id="contacts">
-      <div class="smallContainer">
+      <div class="container">
         <h2>Contacts</h2>
-        <div class="photoContacts">
-          <img src="img/abouthead.jpg" alt="Me young">
-          <img class="myshape" src="img/myshirt.png" alt="My shirt">
+        <div class="content">
+          <div class="part fistpart">
+            <ul class="contact_list">
+              <li><i class="fas fa-phone"></i> +39 324 0813121</li>
+              <li><i class="far fa-envelope"></i> michele@lisignoli.com</li>
+              <li><i class="fas fa-map-marker-alt"></i> Piuro, Italy</li>
+            </ul>
+          </div>
+          <div class="contactMe">
+            <form class="" action="">
+              <textarea name="" id="" rows="10"></textarea>
+            </form>
+          </div>
+          <div class="part lastpart">
+            <div class="dowload_cv">
+              <div class="label"><label for="cv">See my CV:</label></div>
+              <a id="cv" href="img/Michele-Lisignoli_CV.pdf" download>Dowload pdf</a>
+            </div>
+          </div>
         </div>
       </div>
     </section>

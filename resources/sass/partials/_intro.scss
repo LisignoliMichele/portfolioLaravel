@@ -1,19 +1,29 @@
-.intro{
+#intro{
    padding: $sectionPadding;
    background-color: #000;
    color: white;
    font-size: 20px;
    .smallContainer{
       display: flex;
+      flex-wrap: wrap;
       .introleft{
          width: 30%;
+         @media screen and (max-width: 768px){
+            width: 100%;
+          }
          .date{
             margin-right: 10px;
          }
       }
+     
       .introright{
          margin-left: 5%;
          width: 65%;
+         @media screen and (max-width: 768px){
+            width: 100%;
+            margin-left: 0;
+            margin-top: 30px;
+          }
       }
    }
 }

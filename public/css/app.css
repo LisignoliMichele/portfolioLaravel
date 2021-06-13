@@ -473,8 +473,15 @@ section h2 {
   display: flex;
   font-size: 25px;
 }
-.navbar .container .portfolioPages li:not(:last-child) {
-  margin-right: 20px;
+@media screen and (max-width: 768px) {
+  .navbar .container .portfolioPages li {
+    padding: 20px 0;
+  }
+}
+@media screen and (min-width: 768px) {
+  .navbar .container .portfolioPages li:not(:last-child) {
+    margin-right: 20px;
+  }
 }
 .navbar .container .portfolioPages li a {
   color: #cacaca;
@@ -589,6 +596,52 @@ section h2 {
     left: 1%;
   }
 }
+@media screen and (max-width: 768px) {
+  .navbar .container .portfolioPages {
+    display: none;
+  }
+}
+@media screen and (min-width: 768px) {
+  .navbar .container .burger {
+    display: none;
+  }
+}
+.navbar .container .burger .bars,
+.navbar .container .burger .x {
+  font-size: 22px;
+  color: #fff;
+  cursor: pointer;
+}
+.navbar .container .burger .x {
+  display: none;
+}
+.navbar .container .burgeractive::after {
+  content: "";
+  width: 100%;
+  height: 100vh;
+  background-color: black;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -2;
+}
+.navbar .container .burgeractive .bars {
+  display: none;
+}
+.navbar .container .burgeractive .x {
+  display: block;
+}
+.navbar .container .pagelistActive {
+  display: block;
+  text-align: center;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  text-align: center;
+  transform: translate(-50%, -50%);
+}
 
 #home {
   display: flex;
@@ -611,10 +664,15 @@ section h2 {
   padding-top: 50px;
 }
 #home .helloworld .hello {
-  font-size: 40px;
+  font-size: 30px;
   color: #ffffff;
   display: flex;
   justify-content: flex-end;
+}
+@media screen and (max-width: 768px) {
+  #home .helloworld .hello {
+    font-size: 18px;
+  }
 }
 #home .helloworld .hello :nth-child(1) {
   -webkit-animation-name: helloworld1;
@@ -744,6 +802,11 @@ section h2 {
   -webkit-animation-timing-function: linear;
           animation-timing-function: linear;
   margin-right: 15px;
+}
+@media screen and (max-width: 768px) {
+  #home .helloworld .hello :nth-child(5) {
+    margin-right: 5px;
+  }
 }
 @-webkit-keyframes helloworld5 {
   0% {
@@ -926,6 +989,11 @@ section h2 {
   -webkit-animation-timing-function: linear;
           animation-timing-function: linear;
 }
+@media screen and (max-width: 768px) {
+  #home .helloworld .hello :nth-child(11) {
+    margin-right: 5px;
+  }
+}
 @-webkit-keyframes helloworld11 {
   0% {
     opacity: 0;
@@ -956,6 +1024,11 @@ section h2 {
           animation-duration: 6s;
   -webkit-animation-timing-function: linear;
           animation-timing-function: linear;
+}
+@media screen and (max-width: 768px) {
+  #home .helloworld .hello :nth-child(12) {
+    margin-right: 5px;
+  }
 }
 @-webkit-keyframes helloworld12 {
   0% {
@@ -1045,7 +1118,13 @@ section h2 {
   font-family: "plyfull";
   display: flex;
   justify-content: flex-end;
-  font-size: 150px;
+  font-size: 120px;
+}
+@media screen and (max-width: 768px) {
+  #home .helloworld .michele,
+#home .helloworld .lisignoli {
+    font-size: 80px;
+  }
 }
 #home .helloworld .michele :nth-child(1) {
   -webkit-animation-name: rotateMIC1;
@@ -1824,6 +1903,12 @@ section h2 {
   justify-content: flex-end;
   margin-top: 20px;
 }
+@media screen and (max-width: 768px) {
+  #home .helloworld .webDeveloper {
+    font-size: 18px;
+    margin-top: 11px;
+  }
+}
 #home .helloworld .webDeveloper :nth-child(1) {
   -webkit-animation-name: webdev1;
           animation-name: webdev1;
@@ -1892,6 +1977,11 @@ section h2 {
   -webkit-animation-timing-function: linear;
           animation-timing-function: linear;
   margin-right: 10px;
+}
+@media screen and (max-width: 768px) {
+  #home .helloworld .webDeveloper :nth-child(3) {
+    margin-right: 5px;
+  }
 }
 @-webkit-keyframes webdev3 {
   0% {
@@ -1983,6 +2073,11 @@ section h2 {
   -webkit-animation-timing-function: linear;
           animation-timing-function: linear;
   margin-right: 10px;
+}
+@media screen and (max-width: 768px) {
+  #home .helloworld .webDeveloper :nth-child(6) {
+    margin-right: 5px;
+  }
 }
 @-webkit-keyframes webdev6 {
   0% {
@@ -2277,24 +2372,37 @@ section h2 {
   }
 }
 
-.intro {
+#intro {
   padding: 150px 0;
   background-color: #000;
   color: white;
   font-size: 20px;
 }
-.intro .smallContainer {
+#intro .smallContainer {
   display: flex;
+  flex-wrap: wrap;
 }
-.intro .smallContainer .introleft {
+#intro .smallContainer .introleft {
   width: 30%;
 }
-.intro .smallContainer .introleft .date {
+@media screen and (max-width: 768px) {
+  #intro .smallContainer .introleft {
+    width: 100%;
+  }
+}
+#intro .smallContainer .introleft .date {
   margin-right: 10px;
 }
-.intro .smallContainer .introright {
+#intro .smallContainer .introright {
   margin-left: 5%;
   width: 65%;
+}
+@media screen and (max-width: 768px) {
+  #intro .smallContainer .introright {
+    width: 100%;
+    margin-left: 0;
+    margin-top: 30px;
+  }
 }
 
 #aboutMe {
@@ -2305,7 +2413,6 @@ section h2 {
 #aboutMe h2 {
   text-align: center;
   margin-bottom: 40px;
-  font-size: 150px;
 }
 #aboutMe p {
   color: #fff;
@@ -2316,6 +2423,12 @@ section h2 {
   width: 25%;
   top: 0;
   right: 0;
+  z-index: 0;
+}
+@media screen and (max-width: 768px) {
+  #aboutMe .bells {
+    width: 50%;
+  }
 }
 #aboutMe .bells img {
   width: 100%;
@@ -2328,51 +2441,55 @@ section h2 {
 #aboutMe .aboutMain .intro,
 #aboutMe .aboutMain .prevLive,
 #aboutMe .aboutMain .australia {
-  border-radius: 50%;
+  position: absolute;
+  background-image: url("../img/CHEESEHOLE.png");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
   display: flex;
-  justify-content: center;
-  align-items: center;
   text-align: center;
-  box-shadow: inset 5px 10px #917e5d;
+  justify-content: center;
+}
+#aboutMe .aboutMain .tecnologies .content,
+#aboutMe .aboutMain .intro .content,
+#aboutMe .aboutMain .prevLive .content,
+#aboutMe .aboutMain .australia .content {
+  max-width: 80%;
+  max-height: 300px;
+  overflow-y: scroll;
+}
+#aboutMe .aboutMain .tecnologies .content::-webkit-scrollbar,
+#aboutMe .aboutMain .intro .content::-webkit-scrollbar,
+#aboutMe .aboutMain .prevLive .content::-webkit-scrollbar,
+#aboutMe .aboutMain .australia .content::-webkit-scrollbar {
+  display: none;
 }
 #aboutMe .aboutMain .intro {
-  width: 550px;
-  height: 550px;
-  padding: 100px;
-  background-color: black;
-  position: absolute;
-  top: 0%;
-  left: 10%;
+  width: 55%;
+  padding: 11%;
+  top: -20px;
+  left: -60px;
 }
 #aboutMe .aboutMain .tecnologies {
-  height: 400px;
-  width: 400px;
-  padding: 70px;
-  background-color: black;
-  position: absolute;
-  top: 11%;
+  width: 37%;
+  padding: 8%;
+  top: 200px;
   right: 15%;
 }
 #aboutMe .aboutMain .prevLive {
-  width: 500px;
-  height: 500px;
-  padding: 80px;
-  background-color: black;
-  position: absolute;
-  bottom: 2%;
-  left: 20%;
+  width: 30%;
+  padding: 6%;
+  top: 600px;
+  left: 30%;
 }
 #aboutMe .aboutMain .australia {
-  width: 250px;
-  height: 250px;
-  padding: 20px;
-  background-color: black;
-  position: absolute;
-  bottom: 37%;
-  left: -2%;
+  width: 17%;
+  padding: 3%;
+  top: 950px;
+  left: 5%;
 }
 #aboutMe .aboutMain .meElephant {
-  width: 40%;
+  width: 35%;
   position: absolute;
   bottom: -154px;
   right: 0;
@@ -2388,6 +2505,66 @@ section h2 {
   background-color: #ED4534;
   top: 50%;
   left: 50%;
+  -webkit-animation-name: moveCirle;
+          animation-name: moveCirle;
+  -webkit-animation-duration: 30s;
+          animation-duration: 30s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+@-webkit-keyframes moveCirle {
+  0% {
+    top: 50%;
+    left: 50%;
+  }
+  10% {
+    top: 10%;
+    left: 90%;
+  }
+  30% {
+    top: 12%;
+    left: 6%;
+  }
+  50% {
+    top: 90%;
+    left: 19%;
+  }
+  60% {
+    top: 20%;
+    left: -10%;
+  }
+  100% {
+    top: 50%;
+    left: 50%;
+  }
+}
+@keyframes moveCirle {
+  0% {
+    top: 50%;
+    left: 50%;
+  }
+  10% {
+    top: 10%;
+    left: 90%;
+  }
+  30% {
+    top: 12%;
+    left: 6%;
+  }
+  50% {
+    top: 90%;
+    left: 19%;
+  }
+  60% {
+    top: 20%;
+    left: -10%;
+  }
+  100% {
+    top: 50%;
+    left: 50%;
+  }
 }
 #aboutMe .aboutMain .circle_2 {
   position: absolute;
@@ -2397,6 +2574,66 @@ section h2 {
   background-color: #004B5A;
   top: 40%;
   left: 15%;
+  -webkit-animation-name: moveCirle2;
+          animation-name: moveCirle2;
+  -webkit-animation-duration: 30s;
+          animation-duration: 30s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+@-webkit-keyframes moveCirle2 {
+  0% {
+    top: 40%;
+    left: 15%;
+  }
+  20% {
+    top: 80%;
+    left: -10%;
+  }
+  40% {
+    top: -10%;
+    left: 80%;
+  }
+  60% {
+    top: 20%;
+    left: 0%;
+  }
+  80% {
+    top: 80%;
+    left: 30%;
+  }
+  100% {
+    top: 40%;
+    left: 15%;
+  }
+}
+@keyframes moveCirle2 {
+  0% {
+    top: 40%;
+    left: 15%;
+  }
+  20% {
+    top: 80%;
+    left: -10%;
+  }
+  40% {
+    top: -10%;
+    left: 80%;
+  }
+  60% {
+    top: 20%;
+    left: 0%;
+  }
+  80% {
+    top: 80%;
+    left: 30%;
+  }
+  100% {
+    top: 40%;
+    left: 15%;
+  }
 }
 #aboutMe .aboutMain .circle_3 {
   position: absolute;
@@ -2406,6 +2643,66 @@ section h2 {
   background-color: #6BCBF3;
   top: 70%;
   right: 0;
+  -webkit-animation-name: moveCirle3;
+          animation-name: moveCirle3;
+  -webkit-animation-duration: 30s;
+          animation-duration: 30s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+@-webkit-keyframes moveCirle3 {
+  0% {
+    top: 70%;
+    right: 0;
+  }
+  20% {
+    top: 0;
+    right: 70%;
+  }
+  40% {
+    top: 10%;
+    right: 10%;
+  }
+  60% {
+    top: -10%;
+    right: -10%;
+  }
+  80% {
+    top: 90%;
+    right: 30%;
+  }
+  100% {
+    top: 70%;
+    right: 0;
+  }
+}
+@keyframes moveCirle3 {
+  0% {
+    top: 70%;
+    right: 0;
+  }
+  20% {
+    top: 0;
+    right: 70%;
+  }
+  40% {
+    top: 10%;
+    right: 10%;
+  }
+  60% {
+    top: -10%;
+    right: -10%;
+  }
+  80% {
+    top: 90%;
+    right: 30%;
+  }
+  100% {
+    top: 70%;
+    right: 0;
+  }
 }
 #aboutMe .aboutMain .circle_4 {
   position: absolute;
@@ -2415,6 +2712,66 @@ section h2 {
   background-color: #071F41;
   bottom: 0%;
   left: 10%;
+  -webkit-animation-name: moveCirle4;
+          animation-name: moveCirle4;
+  -webkit-animation-duration: 30s;
+          animation-duration: 30s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+@-webkit-keyframes moveCirle4 {
+  0% {
+    bottom: 0%;
+    left: 10%;
+  }
+  20% {
+    bottom: 20%;
+    left: 30%;
+  }
+  40% {
+    bottom: -10%;
+    left: 80%;
+  }
+  60% {
+    bottom: 40%;
+    left: 60%;
+  }
+  80% {
+    bottom: 10%;
+    left: 30%;
+  }
+  100% {
+    bottom: 0%;
+    left: 10%;
+  }
+}
+@keyframes moveCirle4 {
+  0% {
+    bottom: 0%;
+    left: 10%;
+  }
+  20% {
+    bottom: 20%;
+    left: 30%;
+  }
+  40% {
+    bottom: -10%;
+    left: 80%;
+  }
+  60% {
+    bottom: 40%;
+    left: 60%;
+  }
+  80% {
+    bottom: 10%;
+    left: 30%;
+  }
+  100% {
+    bottom: 0%;
+    left: 10%;
+  }
 }
 
 #projects {
@@ -2492,19 +2849,54 @@ section h2 {
   color: white;
 }
 
-#contacts .photoContacts {
-  width: 25%;
-  position: relative;
+#contacts {
+  padding: 150px 0;
+  background-color: #004B5A;
+  color: #fff;
 }
-#contacts .photoContacts .myshape {
-  position: absolute;
-  right: 0;
-  transition: 2s;
-  opacity: 0;
+#contacts h2 {
+  text-align: center;
+  margin-bottom: 40px;
 }
-#contacts .photoContacts img {
+#contacts .content {
+  display: flex;
+  justify-content: space-between;
+}
+#contacts .content .contactMe {
+  width: 50%;
+}
+#contacts .content .contactMe textarea {
   width: 100%;
+  color: black;
+  padding: 30px;
+  font-family: "oxygen";
 }
-#contacts .photoContacts:hover .myshape {
-  opacity: 1;
+#contacts .content .part {
+  width: 20%;
+  width: 40%;
+}
+#contacts .content .part .contact_list {
+  list-style: none;
+}
+#contacts .content .part .contact_list li {
+  margin: 15px 0;
+}
+#contacts .content .part .contact_list li i {
+  margin-right: 5px;
+}
+#contacts .content .part .dowload_cv .label {
+  margin-bottom: 15px;
+}
+#contacts .content .part .dowload_cv a {
+  text-decoration: none;
+  padding: 10px;
+  background-color: #F6C76F;
+  transition: 0.5s all;
+  color: #000;
+}
+#contacts .content .part .dowload_cv a:hover {
+  background-color: #ED4534;
+}
+#contacts .lastpart {
+  text-align: end;
 }
