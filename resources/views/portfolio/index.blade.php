@@ -100,31 +100,43 @@
           <img src="img/bells_web.png" alt="bells">
         </div>
         <div class="aboutMain">
-        <div class="intro">
-          <div class="content">
-            <p>I am a junior full stack web developer,<br> 
-              enthusiastic to get involved, test myself and expand my knowledge of this amazing profession.<br>
-              Technology is my greatest passion and expressing my creativity is my lifeblood<br>
-              I approached the code by acquiring technical skills both on the FRONTEND and BACKEND side.<br></p>
+          <div class="cheeseHoles">
+          <div class="intro">
+            <div class="content">
+              <p>I am a junior full stack web developer,<br> 
+                enthusiastic to get involved, test myself and expand my knowledge of this amazing profession.<br>
+                Technology is my greatest passion and expressing my creativity is my lifeblood<br>
+                I approached the code by acquiring technical skills both on the FRONTEND and BACKEND side.<br></p>
+            </div>
           </div>
-        </div>
-        <div class="tecnologies">
-          <div class="content">
-            <p>I started my journey in this environment by learning the following tecnologies:
-            HTML5, CSS3, SASS, JavaScript, MySQL, PHP, SWIFT, Bootstrap 3/4, jQuery, Vue.js, Laravel, Moment.js, Axios, GSAP</p>
+          <div class="tecnologies">
+            <div class="content">
+              <p>I started my journey in this environment by learning the following tecnologies:
+              HTML5, CSS3, SASS, JavaScript, MySQL, PHP, SWIFT, Bootstrap 3/4, jQuery, Vue.js, Laravel, Moment.js, Axios, GSAP</p>
+            </div>
           </div>
-        </div>
-        <div class="prevLive">
-          <div class="content">
-            <p>I've lived for more than 5 years in Thailand, where i leaded as executive chef 4 restaurants, in Bangkok, Chiang Mai and Koh Samui. 
-              I've developed great skills to take on many responsibilities, form and motivate a team, relate to clients and colleagues, find solutions quickly and under pressure, managing deadlines and bugets, be organized and integrate into other cultures.</p>
+          <div class="prevLive">
+            <div class="content">
+              <p>I've lived for more than 5 years in Thailand, where i leaded as executive chef 4 restaurants, in Bangkok, Chiang Mai and Koh Samui. 
+                I've developed great skills to take on many responsibilities, form and motivate a team, relate to clients and colleagues, find solutions quickly and under pressure, managing deadlines and bugets, be organized and integrate into other cultures.</p>
+            </div>
           </div>
-        </div>
-        <div class="australia">
-          <div class="content">
-            <p>1 year and a half in Sydney, Australia, where I could improve my English</p>
+          <div class="australia">
+            <div class="content">
+              <p>1 year and a half in Sydney, Australia, where I could improve my English</p>
+            </div>
           </div>
-        </div>
+       </div>
+       <div class="allLyric">
+        <p>I am a junior full stack web developer,<br> 
+          enthusiastic to get involved, test myself and expand my knowledge of this amazing profession.<br>
+          Technology is my greatest passion and expressing my creativity is my lifeblood<br>
+          I approached the code by acquiring technical skills both on the FRONTEND and BACKEND side.</p>
+        <p>I started my journey in this environment by learning the following tecnologies:
+              HTML5, CSS3, SASS, JavaScript, MySQL, PHP, SWIFT, Bootstrap 3/4, jQuery, Vue.js, Laravel, Moment.js, Axios, GSAP</p>
+        <p>I've lived for more than 5 years in Thailand, where i leaded as executive chef 4 restaurants, in Bangkok, Chiang Mai and Koh Samui. I've developed great skills to take on many responsibilities, form and motivate a team, relate to clients and colleagues, find solutions quickly and under pressure, managing deadlines and bugets, be organized and integrate into other cultures.</p>
+        <p>1 year and a half in Sydney, Australia, where I could improve my English</p>
+       </div>
         <div class="circle_1"></div>
         <div class="circle_2"></div>
         <div class="circle_3"></div>

@@ -45,6 +45,11 @@ section h2 {
   font-family: "plyfull";
   font-size: 100px;
 }
+@media screen and (max-width: 400px) {
+  section h2 {
+    font-size: 50px;
+  }
+}
 
 .preloader {
   position: fixed;
@@ -2409,6 +2414,9 @@ section h2 {
   background-color: #F6C76F;
   padding: 150px 0;
   position: relative;
+  width: 100%;
+  overflow: hidden;
+  z-index: -10;
 }
 #aboutMe h2 {
   text-align: center;
@@ -2420,10 +2428,10 @@ section h2 {
 }
 #aboutMe .bells {
   position: absolute;
+  z-index: -5;
   width: 25%;
   top: 0;
   right: 0;
-  z-index: 0;
 }
 @media screen and (max-width: 768px) {
   #aboutMe .bells {
@@ -2437,59 +2445,106 @@ section h2 {
   height: 1300px;
   position: relative;
 }
-#aboutMe .aboutMain .tecnologies,
-#aboutMe .aboutMain .intro,
-#aboutMe .aboutMain .prevLive,
-#aboutMe .aboutMain .australia {
+@media screen and (max-width: 1500px) {
+  #aboutMe .aboutMain {
+    height: 2000px;
+  }
+}
+@media screen and (max-width: 768px) {
+  #aboutMe .aboutMain {
+    height: 100%;
+  }
+}
+#aboutMe .aboutMain .allLyric {
+  margin-top: 250px;
+  padding: 30px;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.6);
+}
+#aboutMe .aboutMain .allLyric p {
+  color: black;
+  margin-bottom: 30px;
+}
+@media screen and (min-width: 768px) {
+  #aboutMe .aboutMain .allLyric {
+    display: none;
+  }
+}
+@media screen and (max-width: 768px) {
+  #aboutMe .aboutMain .cheeseHoles {
+    display: none;
+  }
+}
+#aboutMe .aboutMain .cheeseHoles .tecnologies,
+#aboutMe .aboutMain .cheeseHoles .intro,
+#aboutMe .aboutMain .cheeseHoles .prevLive,
+#aboutMe .aboutMain .cheeseHoles .australia {
   position: absolute;
   background-image: url("../img/CHEESEHOLE.png");
   background-position: center;
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
   display: flex;
   text-align: center;
   justify-content: center;
+  align-items: center;
 }
-#aboutMe .aboutMain .tecnologies .content,
-#aboutMe .aboutMain .intro .content,
-#aboutMe .aboutMain .prevLive .content,
-#aboutMe .aboutMain .australia .content {
-  max-width: 80%;
-  max-height: 300px;
-  overflow-y: scroll;
+#aboutMe .aboutMain .cheeseHoles .tecnologies .content,
+#aboutMe .aboutMain .cheeseHoles .intro .content,
+#aboutMe .aboutMain .cheeseHoles .prevLive .content,
+#aboutMe .aboutMain .cheeseHoles .australia .content {
+  max-width: 65%;
 }
-#aboutMe .aboutMain .tecnologies .content::-webkit-scrollbar,
-#aboutMe .aboutMain .intro .content::-webkit-scrollbar,
-#aboutMe .aboutMain .prevLive .content::-webkit-scrollbar,
-#aboutMe .aboutMain .australia .content::-webkit-scrollbar {
-  display: none;
-}
-#aboutMe .aboutMain .intro {
-  width: 55%;
-  padding: 11%;
+#aboutMe .aboutMain .cheeseHoles .intro {
+  width: 600px;
+  height: 600px;
   top: -20px;
   left: -60px;
 }
-#aboutMe .aboutMain .tecnologies {
-  width: 37%;
-  padding: 8%;
+@media screen and (max-width: 768px) {
+  #aboutMe .aboutMain .cheeseHoles .intro {
+    top: 100px;
+    left: -120px;
+  }
+}
+#aboutMe .aboutMain .cheeseHoles .tecnologies {
+  width: 400px;
+  height: 400px;
   top: 200px;
   right: 15%;
 }
-#aboutMe .aboutMain .prevLive {
-  width: 30%;
-  padding: 6%;
+@media screen and (max-width: 1500px) {
+  #aboutMe .aboutMain .cheeseHoles .tecnologies {
+    top: 515px;
+    right: 0%;
+  }
+}
+#aboutMe .aboutMain .cheeseHoles .prevLive {
+  width: 700px;
+  height: 700px;
   top: 600px;
   left: 30%;
 }
-#aboutMe .aboutMain .australia {
-  width: 17%;
-  padding: 3%;
+@media screen and (max-width: 1500px) {
+  #aboutMe .aboutMain .cheeseHoles .prevLive {
+    top: 900px;
+    left: 0;
+  }
+}
+#aboutMe .aboutMain .cheeseHoles .australia {
+  width: 300px;
+  height: 300px;
   top: 950px;
   left: 5%;
 }
+@media screen and (max-width: 1500px) {
+  #aboutMe .aboutMain .cheeseHoles .australia {
+    top: 1605px;
+  }
+}
 #aboutMe .aboutMain .meElephant {
   width: 35%;
+  min-width: 400px;
   position: absolute;
   bottom: -154px;
   right: 0;
@@ -2497,8 +2552,15 @@ section h2 {
 #aboutMe .aboutMain .meElephant img {
   width: 100%;
 }
+@media screen and (max-width: 768px) {
+  #aboutMe .aboutMain .meElephant {
+    position: relative;
+    width: 100%;
+  }
+}
 #aboutMe .aboutMain .circle_1 {
   position: absolute;
+  z-index: -1;
   border-radius: 50%;
   width: 100px;
   height: 100px;
@@ -2568,6 +2630,7 @@ section h2 {
 }
 #aboutMe .aboutMain .circle_2 {
   position: absolute;
+  z-index: -1;
   border-radius: 50%;
   width: 50px;
   height: 50px;
@@ -2637,6 +2700,7 @@ section h2 {
 }
 #aboutMe .aboutMain .circle_3 {
   position: absolute;
+  z-index: -1;
   border-radius: 50%;
   width: 20px;
   height: 20px;
@@ -2706,6 +2770,7 @@ section h2 {
 }
 #aboutMe .aboutMain .circle_4 {
   position: absolute;
+  z-index: -1;
   border-radius: 50%;
   width: 70px;
   height: 70px;
