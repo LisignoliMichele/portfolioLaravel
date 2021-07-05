@@ -11,6 +11,10 @@ use Illuminate\Support\Facades\Mail;
 
 class VisitorController extends Controller
 {
+    public function index(){
+        $messages = Visitor::get()->toJson(JSON_PRETTY_PRINT);
+        return response($messages, 200);
+    }
 
     public function create()
     {

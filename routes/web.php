@@ -21,7 +21,11 @@ Route::get('/', function () {
     return view('portfolio.index');
 })->name('portfolio');;
 
-Route::resource('visitor', 'VisitorController');
+Route::resource('/visitor', 'VisitorController');
+
+Route::get('/thankyou', function () {
+    return view('portfolio.thanks');
+})->name('thanks');
 
 Route::get('/boolflix', function () {
     return view('boolflix.index');
