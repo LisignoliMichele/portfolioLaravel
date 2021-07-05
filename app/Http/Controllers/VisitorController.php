@@ -38,6 +38,6 @@ class VisitorController extends Controller
         Visitor::create($request->all());
 
         // return
-        return redirect()->route('portfolio')->with('message', 'Thank you for contacting me, I will answer you as soon as possible!');;
+        return redirect()->route('thanks');
     }
 }

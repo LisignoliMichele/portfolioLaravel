@@ -9,7 +9,7 @@
 @endsection
 @section('cdns')
 <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
-<script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/Draggable.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js" integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -209,7 +209,7 @@
             </div>
             @endif
 
-            <form action="{{route('visitor.store')}}" method="POST">
+            <form action="{{secure_url('visitor.store')}}" method="POST">
               @csrf
               @method('POST')
               {{-- Nome --}}
@@ -236,7 +236,7 @@
               <div class="submit">
                 <button type="submit">Send</button>
              </div>
-             
+
             </form>
           </div>
 
