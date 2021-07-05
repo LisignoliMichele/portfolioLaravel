@@ -66,71 +66,112 @@ var app = new Vue({
     setInterval(() => {
       this.time = moment().format('HH:mm:ss')
     }, 1000)
-  }
-});
-TweenLite.defaultEase = Linear.easeNone;
-
-var picker = document.querySelector(".picker");
-var cells = document.querySelectorAll(".cell");
-var proxy = document.createElement("div");
-
-var cellWidth = 450;
-//var rotationX = 90;
-
-var numCells = cells.length;
-var cellStep = 1 / numCells;
-var wrapWidth = cellWidth * numCells;
-
-var baseTl = new TimelineMax({ paused: true });
-
-TweenLite.set(picker, {
-  //perspective: 1100,
-  width: wrapWidth - cellWidth
-});
-
-for (var i = 0; i < cells.length; i++) {  
-  initCell(cells[i], i);
-}
-
-var animation = new TimelineMax({ repeat: -1, paused: true })
-  .add(baseTl.tweenFromTo(1, 2))
-
-var draggable = new Draggable(proxy, {  
-  // allowContextMenu: true,  
-  type: "x",
-  trigger: picker,
-  throwProps: true,
-  onDrag: updateProgress,
-  onThrowUpdate: updateProgress,
-  snap: { 
-    x: snapX
   },
-  onThrowComplete: function(){
-    console.log("onThrowComplete");
-    //TODO: animation that inject selected card title
-  }
+  mounted (){
+     gsap.registerPlugin(Draggable);
+
+     var slideDelay = 5;
+     var slideDuration = 0.3;
+     var snapX;
+     
+     var slides = document.querySelectorAll(".slide");
+     var prevButton = document.querySelector("#prevButton");
+     var nextButton = document.querySelector("#nextButton");
+     var progressWrap = gsap.utils.wrap(0, 1);
+     
+     var numSlides = slides.length;
+     
+     gsap.set(slides, {
+       xPercent: i => i * 100
+     });
+     
+     var wrap = gsap.utils.wrap(-100, (numSlides - 1) * 100);
+     var timer = gsap.delayedCall(slideDelay, autoPlay);
+     
+     var animation = gsap.to(slides, {
+       xPercent: "+=" + (numSlides * 100),
+       duration: 1,
+       ease: "none",
+       paused: true,
+       repeat: -1,
+       modifiers: {
+         xPercent: wrap
+       }
+     });
+     
+     var proxy = document.createElement("div");
+     var slideAnimation = gsap.to({}, {});
+     var slideWidth = 0;
+     var wrapWidth = 0;
+     resize();
+     
+     var draggable = new Draggable(proxy, {
+       trigger: ".slides-container",
+       inertia: true,
+       onPress: updateDraggable,
+       onDrag: updateProgress,
+       onThrowUpdate: updateProgress,
+       snap: {     
+         x: snapX
+       }
+     });
+     
+     window.addEventListener("resize", resize);
+     
+     prevButton.addEventListener("click", function() {
+       animateSlides(1);
+     });
+     
+     nextButton.addEventListener("click", function() {
+       animateSlides(-1);
+     });
+     
+     function updateDraggable() {
+       timer.restart(true);
+       slideAnimation.kill();
+       this.update();
+     }
+     
+     function animateSlides(direction) {
+         
+       timer.restart(true);
+       slideAnimation.kill();
+       
+       var x = snapX(gsap.getProperty(proxy, "x") + direction * slideWidth);
+       
+       slideAnimation = gsap.to(proxy, {
+         x: x,
+         duration: slideDuration,
+         onUpdate: updateProgress
+       });  
+     }
+     
+     function autoPlay() {  
+       if (draggable.isPressed || draggable.isDragging || draggable.isThrowing) {
+         timer.restart(true);
+       } else {
+         animateSlides(-1);
+       }
+     }
+     
+     function updateProgress() { 
+       animation.progress(progressWrap(gsap.getProperty(proxy, "x") / wrapWidth));
+     }
+     
+     function resize() {
+       
+       var norm = (gsap.getProperty(proxy, "x") / wrapWidth) || 0;
+       
+       slideWidth = slides[0].offsetWidth;
+       wrapWidth = slideWidth * numSlides;
+       snapX = gsap.utils.snap(slideWidth);
+       
+       gsap.set(proxy, {
+         x: norm * wrapWidth
+       });
+       
+       animateSlides(0);
+       slideAnimation.progress(1);
+     }
+  },
 });
-
-function snapX(x) {
-  return Math.round(x / cellWidth) * cellWidth;
-}
-
-function updateProgress() {  
-  animation.progress(this.x / wrapWidth);
-}
-
-function initCell(element, index) {
-  
-  TweenLite.set(element, {
-    width: cellWidth,
-    scale: 0.6,
-    //rotationX: rotationX,
-    x: -cellWidth
-  });
-  
-  var tl = new TimelineMax({ repeat: 1 })
-    .to(element, 1, { x: "+=" + wrapWidth/*, rotationX: -rotationX*/ }, 0)
-    .to(element, cellStep, { color: "#009688", scale: 1, repeat: 1, yoyo: true }, 0.5 - cellStep)
-  
-  baseTl.add(tl, i * -cellStep);
-}

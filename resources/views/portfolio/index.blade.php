@@ -10,6 +10,8 @@
 @section('cdns')
 <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
 <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/Draggable.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js" integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 @endsection
@@ -153,23 +155,32 @@
     <section id="projects">
       <h2>My projects</h2>
       <!-- CAROUSEL -->
-      <div class="carousel">
-        <div id="picker" class="picker">
-          <div v-for="proj in projects" class="cell">
-            <div class="cell-content">
-              <h3>@{{proj.name}}</h3>
-              <div class="webPage">
-                <img :src="proj.webPage" alt="webPage">
-              </div>
-              <h5>Realized with</h5>
-              <small>@{{proj.tecnologies}}</small>
-              <div class="btn">
-                <a :href="proj.url">View</a>
-              </div>
+      <div class="slider">
+        <div class="slides-container">
+            <div v-for="proj in projects" class="slide">
+                <div class="content">
+                  
+                  <div class="webPage">
+                      <img :src="proj.webPage" alt="webPage">
+                  </div>
+                  <div class="lyrics">
+                      <h3>@{{proj.name}}</h3>
+                      <h5>Realized with</h5>
+                      <small>@{{proj.tecnologies}}</small>
+                      <div class="btn">
+                        <a :href="proj.url">View</a>
+                      </div>
+                  </div>
+                </div>
             </div>
-          </div>     
-        </div>  
+        </div>
+        <div class="controls">
+          <div id="prevButton"><i class="fas fa-caret-square-left"></i></div>
+          <div id="nextButton"><i class="fas fa-caret-square-right"></i></div>
+        </div>
       </div>
+        
+        
      <!-- /CAROUSEL -->
     </section>
     {{-- //MY PROJECTS --}}
