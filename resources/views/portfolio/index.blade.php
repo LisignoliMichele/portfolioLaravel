@@ -209,12 +209,12 @@
             </div>
             @endif
 
-            <form action="{{secure_url('visitor.store')}}" method="POST">
+            <form action="{{route('visitor.store')}}" method="POST">
               @csrf
               @method('POST')
               {{-- Nome --}}
               <div class="name">
-                  <label for="name">Name</label>
+                  <label for="name">Name</label>π
                   <input type="text" id="name" name="name" required>
               </div>
               {{-- cognome --}}
