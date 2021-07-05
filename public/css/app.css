@@ -2973,17 +2973,43 @@ section h2 {
 }
 #contacts .content .contactMe {
   width: 50%;
+  background-color: #fff;
+  padding: 30px;
 }
 @media screen and (max-width: 768px) {
   #contacts .content .contactMe {
     width: 100%;
   }
 }
+#contacts .content .contactMe label {
+  color: black;
+  margin-left: 10px;
+}
+#contacts .content .contactMe input,
 #contacts .content .contactMe textarea {
   width: 100%;
   color: black;
-  padding: 30px;
+  background-color: transparent;
+  border: transparent;
+  border-bottom: 1px solid black;
+  padding: 10px;
+  font-size: 15px;
   font-family: "oxygen";
+  margin-bottom: 20px;
+}
+#contacts .content .contactMe .submit {
+  text-align: right;
+}
+#contacts .content .contactMe .submit button {
+  padding: 10px;
+  background-color: #000;
+  transition: 0.5s all;
+  color: #fff;
+  border: 1px solid black;
+}
+#contacts .content .contactMe .submit button:hover {
+  background-color: #fff;
+  color: #000;
 }
 #contacts .content .part {
   width: 20%;

@@ -196,11 +196,50 @@
               <li><i class="fas fa-map-marker-alt"></i> Piuro, Italy</li>
             </ul>
           </div>
+
           <div class="contactMe">
-            <form class="" action="">
-              <textarea name="" id="" rows="10"></textarea>
+
+            @if ($errors->any())
+            <div class="alert alert-danger">
+              <ul>
+                  @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                  @endforeach
+              </ul>
+            </div>
+            @endif
+
+            <form action="{{route('visitor.store')}}" method="POST">
+              @csrf
+              @method('POST')
+              {{-- Nome --}}
+              <div class="name">
+                  <label for="name">Name</label>
+                  <input type="text" id="name" name="name" required>
+              </div>
+              {{-- cognome --}}
+              <div class="lastname">
+                  <label for="lastname">Lastname</label>
+                  <input type="text" id="lastname" name="lastname" required>
+              </div>
+
+              <div class="email">
+                <label for="lastname">Email</label>
+                <input type="email" id="email" name="email" required>
+              </div>
+
+              <div class="object">
+                <label for="object">Message</label>
+                <textarea name="object" id="object" required></textarea>
+              </div>
+
+              <div class="submit">
+                <button type="submit">Send</button>
+             </div>
+             
             </form>
           </div>
+
           <div class="part lastpart">
             <div class="dowload_cv">
               <div class="label"><label for="cv">See my CV:</label></div>

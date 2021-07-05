@@ -12,15 +12,43 @@
       justify-content: space-between;
       .contactMe{
          width: 50%;
+         background-color: #fff;
+         padding: 30px;
          @media screen and (max-width: 768px){
             width: 100%
          }
+         label{
+            color: black;
+            margin-left: 10px;
+         }
+         input,
          textarea{
             width: 100%;
             color: black;
-            padding: 30px;
+            background-color: transparent;
+            border: transparent;
+            border-bottom: 1px solid black;
+            padding: 10px;
+            font-size: 15px;
             font-family: $fontSerious;
+            margin-bottom: 20px;
+            
          }
+         .submit{
+            text-align: right;
+            button{
+               padding: 10px;
+               background-color: #000;
+               transition: 0.5s all;
+               color: #fff;
+               border: 1px solid black;
+               &:hover{
+                  background-color: #fff;
+                  color: #000;
+               }
+            }
+         }
+         
       }
       .part{
          width: 20%;

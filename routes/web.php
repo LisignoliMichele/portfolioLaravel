@@ -21,6 +21,8 @@ Route::get('/', function () {
     return view('portfolio.index');
 })->name('portfolio');;
 
+Route::resource('visitor', 'VisitorController');
+
 Route::get('/boolflix', function () {
     return view('boolflix.index');
 })->name('boolflix');
