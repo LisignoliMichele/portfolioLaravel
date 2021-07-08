@@ -119,7 +119,7 @@
           </div>
           <div class="prevLive">
             <div class="content">
-              <p>I've lived for more than 5 years in Thailand, where i leaded as executive chef 4 restaurants, in Bangkok, Chiang Mai and Koh Samui. 
+              <p>I've lived for more than 5 years in Thailand, where I leaded as executive chef 4 restaurants, in Bangkok, Chiang Mai and Koh Samui. 
                 I've developed great skills to take on many responsibilities, form and motivate a team, relate to clients and colleagues, find solutions quickly and under pressure, managing deadlines and bugets, be organized and integrate into other cultures.</p>
             </div>
           </div>
@@ -136,7 +136,7 @@
           I approached the code by acquiring technical skills both on the FRONTEND and BACKEND side.</p>
         <p>I started my journey in this environment by learning the following tecnologies:
               HTML5, CSS3, SASS, JavaScript, MySQL, PHP, SWIFT, Bootstrap 3/4, jQuery, Vue.js, Laravel, Moment.js, Axios, GSAP</p>
-        <p>I've lived for more than 5 years in Thailand, where i leaded as executive chef 4 restaurants, in Bangkok, Chiang Mai and Koh Samui. I've developed great skills to take on many responsibilities, form and motivate a team, relate to clients and colleagues, find solutions quickly and under pressure, managing deadlines and bugets, be organized and integrate into other cultures.</p>
+        <p>I've lived for more than 5 years in Thailand, where I leaded as executive chef 4 restaurants, in Bangkok, Chiang Mai and Koh Samui. I've developed great skills to take on many responsibilities, form and motivate a team, relate to clients and colleagues, find solutions quickly and under pressure, managing deadlines and bugets, be organized and integrate into other cultures.</p>
         <p>1 year and a half in Sydney, Australia, where I could improve my English</p>
        </div>
         <div class="circle_1"></div>
