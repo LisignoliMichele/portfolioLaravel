@@ -1,9 +1,11 @@
 
 #projects{
-   background-color: $lightBluePrimary;
+   background-image: url(../img/blue_paper.jpg);
+   background-size: cover;
    padding: $sectionPadding;
    h2{
       text-align: center;
+      color: #fff;
    }
    .slider {
       display: flex;

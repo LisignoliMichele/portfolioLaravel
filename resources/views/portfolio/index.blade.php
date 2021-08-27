@@ -89,7 +89,7 @@
           <p><span class="date">@{{moment().format("Do-MMM-YY")}}</span> @{{ time }}</p>
         </div>
         <div class="introright">
-          <p><strong>Thank you for being here.</strong><br>This is a little demonstration of what I can do. Afterwards there will be some links to other projects done by me.<br><br><small>Realized with: Laravel, Sass, Vue.js, Photoshop</small></p>
+          <p><strong>Thank you for being here.</strong><br>This is a little demonstration of what I can do. Afterwards there will be some links to other projects done by me.<br><br><small>Realized with: Laravel, Sass, Vue.js</small></p>
         </div>
       </div>
     </div>
@@ -105,39 +105,38 @@
           <div class="cheeseHoles">
           <div class="intro">
             <div class="content">
-              <p>I am a junior full stack web developer,<br> 
-                enthusiastic to get involved, test myself and expand my knowledge of this amazing profession.<br>
-                Technology is my greatest passion and expressing my creativity is my lifeblood<br>
-                I approached the code by acquiring technical skills both on the FRONTEND and BACKEND side.<br></p>
+              <p>I am Full Stack Web Developer,<br> 
+                Expressing my creativity is my lifeblood and technology is my greatest passion. I have been attracted to it since I was a child, developing over the years a study and research methodology to keep knowledge updated and quickly learn new ones.
+                I would like to make a valuable contribution to a company where I can work towards  continuous improvement by sharing my skills and my values.</p>
             </div>
           </div>
           <div class="tecnologies">
             <div class="content">
-              <p>I started my journey in this environment by learning the following tecnologies:
-              HTML5, CSS3, SASS, JavaScript, MySQL, PHP, SWIFT, Bootstrap 3/4, jQuery, Vue.js, Laravel, Moment.js, Axios, GSAP</p>
+              <p>Attending Boolean Careers and ZTM Academy I gained mastery with: JavaScript, Node.js, Vue.js, React.js, PHP, Laravel, SASS, MySQL, MongoDB, Docker</p>
             </div>
           </div>
           <div class="prevLive">
             <div class="content">
-              <p>I've lived for more than 5 years in Thailand, where I leaded as executive chef 4 restaurants, in Bangkok, Chiang Mai and Koh Samui. 
-                I've developed great skills to take on many responsibilities, form and motivate a team, relate to clients and colleagues, find solutions quickly and under pressure, managing deadlines and bugets, be organized and integrate into other cultures.</p>
+              <p>I leaded as executive chef 4 restaurants for 7 years working overseas.<br>
+                Despite being in a distant environment, I developed important skills that still come in handy today:<br> Take on many responsibilities - Relate to clients-colleagues
+                Find solutions quickly and under pressure - Managing deadlines - Managing budgets - Be organised.</p>
             </div>
           </div>
           <div class="australia">
             <div class="content">
-              <p>1 year and a half in Sydney, Australia, where I could improve my English</p>
+              <p>This passion comes from a lifetime as a Web Designer in the Graphic Studio of my Dad. Acquiring a huge sensitivity to style and attention to details.</p>
             </div>
           </div>
        </div>
        <div class="allLyric">
-        <p>I am a junior full stack web developer,<br> 
-          enthusiastic to get involved, test myself and expand my knowledge of this amazing profession.<br>
-          Technology is my greatest passion and expressing my creativity is my lifeblood<br>
-          I approached the code by acquiring technical skills both on the FRONTEND and BACKEND side.</p>
-        <p>I started my journey in this environment by learning the following tecnologies:
-              HTML5, CSS3, SASS, JavaScript, MySQL, PHP, SWIFT, Bootstrap 3/4, jQuery, Vue.js, Laravel, Moment.js, Axios, GSAP</p>
-        <p>I've lived for more than 5 years in Thailand, where I leaded as executive chef 4 restaurants, in Bangkok, Chiang Mai and Koh Samui. I've developed great skills to take on many responsibilities, form and motivate a team, relate to clients and colleagues, find solutions quickly and under pressure, managing deadlines and bugets, be organized and integrate into other cultures.</p>
-        <p>1 year and a half in Sydney, Australia, where I could improve my English</p>
+        <p>I am Full Stack Web Developer,<br> 
+          Expressing my creativity is my lifeblood and technology is my greatest passion. I have been attracted to it since I was a child, developing over the years a study and research methodology to keep knowledge updated and quickly learn new ones.
+          I would like to make a valuable contribution to a company where I can work towards  continuous improvement by sharing my skills and my values.</p>
+        <p>Attending Boolean Careers and ZTM Academy I gained mastery with: JavaScript, Node.js, Vue.js, React.js, PHP, Laravel, SASS, MySQL, MongoDB, Docker</p>
+        <p>This passion comes from a lifetime as a Web Designer in the Graphic Studio of my Dad. Acquiring a huge sensitivity to style and attention to details.</p>
+        <p>I leaded as executive chef 4 restaurants for 7 years working overseas.<br>
+          Despite being in a distant environment, I developed important skills that still come in handy today:<br> Take on many responsibilities - Relate to clients-colleagues
+          Find solutions quickly and under pressure - Managing deadlines - Managing budgets - Be organised.</p>
        </div>
         <div class="circle_1"></div>
         <div class="circle_2"></div>

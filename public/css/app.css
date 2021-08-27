@@ -2540,8 +2540,8 @@ section h2 {
   }
 }
 #aboutMe .aboutMain .cheeseHoles .australia {
-  width: 300px;
-  height: 300px;
+  width: 350px;
+  height: 350px;
   top: 950px;
   left: 5%;
 }
@@ -2848,11 +2848,13 @@ section h2 {
 }
 
 #projects {
-  background-color: #6BCBF3;
+  background-image: url(../img/blue_paper.jpg);
+  background-size: cover;
   padding: 150px 0;
 }
 #projects h2 {
   text-align: center;
+  color: #fff;
 }
 #projects .slider {
   display: flex;
